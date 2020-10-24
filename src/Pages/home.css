@@ -7,7 +7,7 @@
 .home {
   display: flex;
   width: 100vw;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 .home__textleft,
 .home__textright {
