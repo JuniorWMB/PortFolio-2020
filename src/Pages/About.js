@@ -10,7 +10,7 @@ import node from "../assets/node.jpg";
 function About() {
   return (
     <div className="header__container">
-      <Header />
+      {/* <Header /> */}
       <div className="header__wrapper">
         <div className="header__talktome">
           <p>
@@ -28,14 +28,10 @@ function About() {
             <div>
               <h1>Frontend Skills</h1>
             </div>
-            <div className="about__logo">
-              <img src={react} alt="react" />
-              <img src={reactNative} alt="reactnative" />
-              <img src={javascript} alt="javascript" />
-              <img src={htmlandcss} alt="htmlandcss" />
-            </div>
           </div>
-          <div className="header__skillsbackend"></div>
+          <div className="header__skillsbackend">
+            <h1>Backend Skills</h1>
+          </div>
         </div>
       </div>
     </div>

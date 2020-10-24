@@ -6,7 +6,6 @@ import "./home.css";
 function Home() {
   return (
     <div className="home__container">
-      <Header />
       <div className="home">
         <div className="home__textleft">
           <p>Hi,I'm Junior Wembopa</p>

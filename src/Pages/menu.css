@@ -2,14 +2,30 @@
 
 .menu__container {
   z-index: 9;
-  background-color: #fed330;
-  z-index: 9;
   top: 0;
   left: 0;
   right: 0;
   position: fixed;
   height: 100%;
   width: 100%;
+  display: none;
+}
+.menu__secondarybackground {
+  z-index: 9;
+  background-color: black;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+.menu__layer {
+  position: relative;
+  background: #fed330;
+  height: 100%;
+  overflow: hidden;
 }
 .menu__containtext {
   display: flex;

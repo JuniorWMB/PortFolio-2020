@@ -1,19 +1,78 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 //j'importe mes dependences
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import Menu from "../Pages/Menu";
 
-function Header() {
+function Header({ history }) {
+  //State for Menu button
+
+  const [state, setState] = useState({
+    initial: false,
+    clicked: null,
+    nameMenu: "Menu",
+  });
+
+  //State for disabled button
+  const [disabled, setDisabled] = useState(false);
+
+  //Use effect for page changes
+
+  useEffect(() => {
+    //listen for page changes
+    history.listen(() => {
+      setState({ clicked: false, nameMenu: "Menu" });
+    });
+  });
+
+  const handleMenu = () => {
+    disabledMenu();
+    if (state.initial === false) {
+      setState({
+        initial: null,
+        clicked: true,
+        nameMenu: "Close",
+      });
+    } else if (state.clicked === true) {
+      setState({
+        clicked: !state.clicked,
+        nameMenu: "Menu",
+      });
+    } else if (state.clicked === false) {
+      setState({
+        clicked: !state.clicked,
+        nameMenu: "Close",
+      });
+    }
+    console.log("3");
+  };
+
+  const disabledMenu = () => {
+    setDisabled(!disabled);
+    setTimeout(() => {
+      setDisabled(false);
+    }, 1200);
+  };
+
+  // console.log(state.nameMenu);
+
   return (
-    <header className="header">
-      <Link className="header__portfolio" to="/">
-        Portfolio.
-      </Link>
-      <Link className="header__menu" to="/menu">
-        Menu
-      </Link>
-    </header>
+    <div>
+      <header className="header">
+        <Link className="header__portfolio" to="/">
+          Portfolio.
+        </Link>
+        <button
+          disabled={disabled}
+          onClick={handleMenu}
+          className="header__menu"
+        >
+          {state.nameMenu}
+        </button>
+      </header>
+      <Menu state={state} />
+    </div>
   );
 }
 
-export default Header;
+export default withRouter(Header);
