@@ -1,0 +1,33 @@
+.header__container {
+  width: 100vw;
+  height: 100vh;
+  border: red solid 3px;
+}
+
+.header__wrapper {
+  border: black solid 1px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.header__talktome {
+  width: 50%;
+  border: green solid 1px;
+}
+.header__skillsfrontend {
+  border: blueviolet 1px solid;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.about__logo > img {
+  width: 5%;
+  height: 5%;
+}
+.header__skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
