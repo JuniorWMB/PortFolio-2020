@@ -9,7 +9,13 @@
   width: 100vw;
   margin-top: 2%;
 }
-.home__textleft,
+.home__textleft {
+  height: 79px;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+}
+
 .home__textright {
   width: 50vw;
   height: 50vh;
@@ -40,4 +46,28 @@
   text-align: justify;
   margin-left: 50px;
   margin-right: 100px;
+}
+.home__textleft {
+  position: relative;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  font-size: 70px;
+  margin-left: 100px;
+  overflow: hidden;
+}
+.home__textleft .box {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  background: #fed330;
+  width: 0px;
+  height: 1vw;
+  z-index: -1;
+}
+.home__textleft .hi {
+  display: inline-block;
+}
+.text {
+}
+.cursor {
 }
