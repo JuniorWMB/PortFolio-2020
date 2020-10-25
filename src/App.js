@@ -9,6 +9,7 @@ import Works from "./Pages/Works";
 
 // import de mes dependences
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
                 <Route exact path="/menu" component={Menu} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/works" component={Works} />
+                <Route exact path="/contact" component={Contact} />
               </Switch>
             </div>
           </div>

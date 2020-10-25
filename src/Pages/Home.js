@@ -8,7 +8,7 @@ function Home() {
     <div className="home__container">
       <div className="home">
         <div className="home__textleft">
-          <p>Hi,I'm Junior Wembopa</p>
+          <p>Hi,I'm Junior </p>
         </div>
         <div className="home__textright">
           <p>
@@ -18,9 +18,9 @@ function Home() {
             corrupti alias, modi tempore similique.
           </p>
           <div className="home__social">
-            <GitHub size={50} />
-            <Linkedin size={50} />
-            <Twitter size={50} />
+            <GitHub strokeWidth="1.5px" size={60} />
+            <Linkedin strokeWidth="1.5px" size={60} />
+            <Twitter strokeWidth="1.5px" size={60} />
           </div>
         </div>
       </div>
