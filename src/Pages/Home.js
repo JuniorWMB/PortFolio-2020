@@ -6,12 +6,12 @@ import { Timeline } from "gsap/gsap-core";
 import { TextPlugin } from "gsap/TextPlugin";
 import { RoughEase } from "gsap/EasePack";
 
+const words = ["Junior.", "A React.js Dev.", "A French Dev.", "Free now."];
+
 function Home() {
-  const words = ["Junior.", "A React FrontEnd Dev.", "Free now."];
   let cursorRef = useRef(null);
   let tl = gsap.timeline();
-  let tlminor = gsap.timeline();
-  let masterTl = gsap.timeline();
+  // let tlminor = gsap.timeline();
 
   // words.forEach((word) => {
   //   let tl = gsap.timeline();
@@ -27,14 +27,40 @@ function Home() {
       delay: 0.5,
       ease: "power4.inOut",
     })
-      .from(".hi", { duration: 1, y: "9vh", ease: "power3.out" })
-      .to(".box", { duration: 1, height: "5vw", ease: "elastic.out" });
+      .from(".hi", {
+        duration: 1,
+        y: "9vh",
+        ease: "power3.out",
+        onComplete: () => masterTl.play(),
+      })
+      .to(".box", { duration: 1, height: "5vw", ease: "elastic.out" })
+      .to(".box", {
+        duration: 1,
+        autoAlpha: 0.2,
+        yoyo: true,
+        repeat: -1,
+        ease:
+          "rough({template:none.out, strength:1,points:20,taper:'none',randomize:true,clamp:false})",
+      });
+
+    // words.forEach((word) => {
+    //   let tl = gsap.timeline(TextPlugin);
+    //   tl.to(".text", { duration: 1, text: word });
+    //   masterTl.add(tl);
+    // });
+    let masterTl = gsap.timeline({ repeat: -1 }).pause();
 
     words.forEach((word) => {
-      let tlminor = gsap.timeline();
-      tlminor.to(".text", { duration: 1, text: word });
-      masterTl.add(tlminor);
+      let tl2 = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 });
+      gsap.registerPlugin(TextPlugin);
+      tl2.to(".text", {
+        text: word,
+        duration: 1,
+      });
+      masterTl.add(tl2);
     });
+
+    // textPlug.to(".text", { duration: 1, text: "Gerclaud" });
   });
 
   return (
@@ -47,7 +73,6 @@ function Home() {
           <span ref={(el) => (cursorRef = el)} className="cursor">
             _
           </span>
-          {/* <p>Hi,I'm Junior </p> */}
         </div>
         <div className="home__textright">
           <p>
@@ -57,7 +82,11 @@ function Home() {
             corrupti alias, modi tempore similique.
           </p>
           <div className="home__social">
-            <GitHub strokeWidth="1.5px" size={60} />
+            <a href="">
+              <div>
+                <GitHub strokeWidth="1.5px" size={60} />
+              </div>
+            </a>
             <Linkedin strokeWidth="1.5px" size={60} />
             <Twitter strokeWidth="1.5px" size={60} />
           </div>

@@ -11,9 +11,10 @@
 }
 .home__textleft {
   height: 79px;
-  width: 50vw;
+  width: 70vw;
   display: flex;
   align-items: center;
+  margin-top: 100px;
 }
 
 .home__textright {
@@ -68,6 +69,7 @@
   display: inline-block;
 }
 .text {
+  margin-left: 5px;
 }
 .cursor {
 }

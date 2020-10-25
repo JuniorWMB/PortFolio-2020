@@ -23,6 +23,7 @@
   background: none;
   outline: none;
   font-size: 20px;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
