@@ -35,6 +35,7 @@
   font-size: 40px;
   padding: 0 10px;
   caret-color: #fed330;
+  color: #fed330;
 }
 .contact__form > button {
   border: none;

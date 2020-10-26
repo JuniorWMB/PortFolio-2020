@@ -1,5 +1,5 @@
 import gsap from "gsap/gsap-core";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { GitHub, Linkedin, Twitter } from "react-feather";
 import "./home.css";
 import { Timeline } from "gsap/gsap-core";
@@ -11,19 +11,25 @@ const words = ["Junior.", "A React.js Dev.", "A French Dev.", "Free now."];
 function Home() {
   let cursorRef = useRef(null);
   let tl = gsap.timeline();
-  // let tlminor = gsap.timeline();
 
-  // words.forEach((word) => {
-  //   let tl = gsap.timeline();
-  //   tl.to(".text", { duration: 1, text: word });
-  //   masterTl.add(tl);
-  // });
+  const [citation, setCitation] = useState({
+    message: "",
+    author: "",
+  });
+
+  const text = [
+    { key: 1, author: "paul", message: "je suis un loup" },
+    { key: 2, author: "marc", message: "je suis un lion" },
+    { key: 3, author: "jules", message: "je suis un chien" },
+    { key: 4, author: "ben", message: "je suis un chat" },
+  ];
+  const index = Math.floor(Math.random() * text.length);
 
   useEffect(() => {
     gsap.to(cursorRef, { opacity: 0, ease: "power2.inOut", repeat: -1 });
     tl.to(".box", {
       duration: 1,
-      width: "15vw",
+      width: "14.5vw",
       delay: 0.5,
       ease: "power4.inOut",
     })
@@ -43,11 +49,6 @@ function Home() {
           "rough({template:none.out, strength:1,points:20,taper:'none',randomize:true,clamp:false})",
       });
 
-    // words.forEach((word) => {
-    //   let tl = gsap.timeline(TextPlugin);
-    //   tl.to(".text", { duration: 1, text: word });
-    //   masterTl.add(tl);
-    // });
     let masterTl = gsap.timeline({ repeat: -1 }).pause();
 
     words.forEach((word) => {
@@ -59,9 +60,21 @@ function Home() {
       });
       masterTl.add(tl2);
     });
+  }, [tl]);
 
-    // textPlug.to(".text", { duration: 1, text: "Gerclaud" });
-  });
+  // useEffect(() => {
+  //   let test = setInterval(
+  //     () =>
+  //       setCitation({
+  //         message: text[index].message,
+  //         author: text[index].author,
+  //       }),
+  //     2000
+  //   );
+  //   return () => {
+  //     clearInterval(test);
+  //   };
+  // }, []);
 
   return (
     <div className="home__container">
@@ -75,18 +88,24 @@ function Home() {
           </span>
         </div>
         <div className="home__textright">
-          <p>
-            Description: Lorem ipsum, dolor sit amet consectetur adipisicing
-            elit. Doloribus nihil eligendi deleniti, ut iusto veniam?
-            Dignissimos possimus id est error dicta architecto. Soluta ea quo
-            corrupti alias, modi tempore similique.
-          </p>
+          <p>{citation.message}</p>
+          <p>{citation.author}</p>
+          {/* <p>
+            text: Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Doloribus nihil eligendi deleniti, ut iusto veniam? Dignissimos
+            possimus id est error dicta architecto. Soluta ea quo corrupti
+            alias, modi tempore similique.
+          </p> */}
+          {/* <button onClick={handleCitaClick}>click me</button> */}
           <div className="home__social">
-            <a href="">
-              <div>
-                <GitHub strokeWidth="1.5px" size={60} />
-              </div>
-            </a>
+            {/* <ul>
+              <li>
+                <a href="https://github.com/wrongakram/react-hamburger-menu/blob/master/src/App.scss">
+                  jjjjjjjjunrvkzhvnozevzuibv
+                </a>
+              </li>
+            </ul> */}
+            <GitHub strokeWidth="1.5px" size={60} />
             <Linkedin strokeWidth="1.5px" size={60} />
             <Twitter strokeWidth="1.5px" size={60} />
           </div>

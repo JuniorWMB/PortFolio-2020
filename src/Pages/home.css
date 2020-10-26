@@ -26,7 +26,8 @@
 .home__textright {
   display: flex;
   flex-direction: column;
-  margin-top: 7%;
+  margin-top: 20%;
+  border: 1px solid green;
 }
 .home__social {
   width: 50%;
@@ -52,7 +53,7 @@
   position: relative;
   font-family: "Titillium Web", sans-serif;
   font-weight: 900;
-  font-size: 70px;
+  font-size: 65px;
   margin-left: 100px;
   overflow: hidden;
 }
@@ -61,7 +62,7 @@
   bottom: 0;
   display: inline-block;
   background: #fed330;
-  width: 0px;
+  width: 4px;
   height: 1vw;
   z-index: -1;
 }
@@ -69,7 +70,5 @@
   display: inline-block;
 }
 .text {
-  margin-left: 5px;
-}
-.cursor {
+  margin-left: 10px;
 }
