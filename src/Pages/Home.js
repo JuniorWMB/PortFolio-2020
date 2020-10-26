@@ -12,19 +12,6 @@ function Home() {
   let cursorRef = useRef(null);
   let tl = gsap.timeline();
 
-  const [citation, setCitation] = useState({
-    message: "",
-    author: "",
-  });
-
-  const text = [
-    { key: 1, author: "paul", message: "je suis un loup" },
-    { key: 2, author: "marc", message: "je suis un lion" },
-    { key: 3, author: "jules", message: "je suis un chien" },
-    { key: 4, author: "ben", message: "je suis un chat" },
-  ];
-  const index = Math.floor(Math.random() * text.length);
-
   useEffect(() => {
     gsap.to(cursorRef, { opacity: 0, ease: "power2.inOut", repeat: -1 });
     tl.to(".box", {
@@ -60,7 +47,7 @@ function Home() {
       });
       masterTl.add(tl2);
     });
-  }, [tl]);
+  });
 
   // useEffect(() => {
   //   let test = setInterval(
@@ -74,7 +61,7 @@ function Home() {
   //   return () => {
   //     clearInterval(test);
   //   };
-  // }, []);
+  // }, [text]);
 
   return (
     <div className="home__container">
@@ -88,8 +75,6 @@ function Home() {
           </span>
         </div>
         <div className="home__textright">
-          <p>{citation.message}</p>
-          <p>{citation.author}</p>
           {/* <p>
             text: Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Doloribus nihil eligendi deleniti, ut iusto veniam? Dignissimos

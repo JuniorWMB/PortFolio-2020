@@ -27,10 +27,40 @@ function About() {
           <div className="header__skillsfrontend">
             <div>
               <h1>Frontend Skills</h1>
+              <ul>
+                <li>VanillaJS</li>
+                <li>ReactJS</li>
+                <li>React Native</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Material UI</li>
+                <li>GreenSock</li>
+                <li>Netlify</li>
+                <li>Firebase</li>
+              </ul>
             </div>
+          </div>
+          <div className="header__skillssoft">
+            <h1>Soft Skills</h1>
+            <ul>
+              <li>Sociability</li>
+              <li>Autonomie</li>
+              <li>Curiosité</li>
+              <li>Logique</li>
+            </ul>
           </div>
           <div className="header__skillsbackend">
             <h1>Backend Skills</h1>
+            <ul>
+              <li>NodeJS</li>
+              <li>Express</li>
+              <li>MongoDB</li>
+              <li>Git</li>
+              <li>Github</li>
+              <li>Heroku</li>
+              <li>Stripe</li>
+              <li>Cloudinary</li>
+            </ul>
           </div>
         </div>
       </div>

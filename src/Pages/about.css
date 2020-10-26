@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600;900&display=swap");
+
 .header__container {
   width: 100vw;
   height: 100vh;
-  border: red solid 3px;
   display: flex;
   flex-direction: column;
 }
@@ -19,13 +20,19 @@
   border: green solid 1px;
 }
 .header__skillsfrontend,
-.header__skillsbackend {
+.header__skillsbackend,
+.header__skillssoft {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: blueviolet 2px solid;
+  box-shadow: 5px 5px 5px grey;
   width: 50%;
-  height: 40%;
+  height: 100%;
+  margin-left: 10px;
+  background: #fed330;
+  border-radius: 2%;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
 }
 .about__logo > img {
   width: 5%;
@@ -33,9 +40,7 @@
 }
 .header__skills {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  border: crimson 1px solid;
-  width: 50%;
+  width: 90%;
   height: 60%;
+  margin-top: 2%;
 }
