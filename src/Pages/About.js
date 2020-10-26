@@ -1,13 +1,34 @@
-import React from "react";
-import Header from "../Components/Header";
+import gsap from "gsap";
+import React, { useRef, useEffect } from "react";
 import "./about.css";
-import react from "../assets/react.png";
-import reactNative from "../assets/reactnative.png";
-import javascript from "../assets/javascript.jpg";
-import htmlandcss from "../assets/htmlandcss.jpg";
-import node from "../assets/node.jpg";
+// import react from "../assets/react.png";
+// import reactNative from "../assets/reactnative.png";
+// import javascript from "../assets/javascript.jpg";
+// import htmlandcss from "../assets/htmlandcss.jpg";
+// import node from "../assets/node.jpg";
 
 function About() {
+  let tl = gsap.timeline();
+
+  useEffect(() => {
+    tl.from(
+      [
+        ".header__skillsfrontend",
+        ".header__skillssoft",
+        ".header__skillsbackend",
+      ],
+      {
+        duration: 1,
+        height: 0,
+        opacity: 0,
+        ease: "power3.inOut",
+        stagger: {
+          amount: 1,
+        },
+      }
+    );
+  });
+
   return (
     <div className="header__container">
       {/* <Header /> */}
