@@ -2,13 +2,18 @@ import gsap from "gsap/gsap-core";
 import React, { useRef, useEffect, useState } from "react";
 import { GitHub, Linkedin, Twitter } from "react-feather";
 import "./home.css";
-import { Timeline } from "gsap/gsap-core";
+import me from "../assets/me.jpeg";
+import meTwo from "../assets/me2.jpeg";
 import { TextPlugin } from "gsap/TextPlugin";
-import { RoughEase } from "gsap/EasePack";
 
 const words = ["Junior.", "A React.js Dev.", "A French Dev.", "Free now."];
 
 function Home() {
+  const [picture, setPicture] = useState({
+    img: me,
+    imgMoi: meTwo,
+  });
+
   let cursorRef = useRef(null);
   let tl = gsap.timeline();
 
@@ -49,20 +54,6 @@ function Home() {
     });
   });
 
-  // useEffect(() => {
-  //   let test = setInterval(
-  //     () =>
-  //       setCitation({
-  //         message: text[index].message,
-  //         author: text[index].author,
-  //       }),
-  //     2000
-  //   );
-  //   return () => {
-  //     clearInterval(test);
-  //   };
-  // }, [text]);
-
   return (
     <div className="home__container">
       <div className="home">
@@ -75,24 +66,27 @@ function Home() {
           </span>
         </div>
         <div className="home__textright">
-          {/* <p>
-            text: Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Doloribus nihil eligendi deleniti, ut iusto veniam? Dignissimos
-            possimus id est error dicta architecto. Soluta ea quo corrupti
-            alias, modi tempore similique.
-          </p> */}
-          {/* <button onClick={handleCitaClick}>click me</button> */}
           <div className="home__social">
-            {/* <ul>
-              <li>
-                <a href="https://github.com/wrongakram/react-hamburger-menu/blob/master/src/App.scss">
-                  jjjjjjjjunrvkzhvnozevzuibv
-                </a>
-              </li>
-            </ul> */}
-            <GitHub strokeWidth="1.5px" size={60} />
+            {/* <div className="home__barcolortwo"></div>
+            <div className="home__barcolorthree"></div> */}
+            <img
+              className="home__picture"
+              src={me}
+              // onMouseEnter={() => {
+              //   setPicture({
+              //     img: me,
+              //   });
+              // }}
+              // onMouseOut={() => {
+              //   setPicture({
+              //     imgMoi: meTwo,
+              //   });
+              // }}
+              alt="me of me"
+            />
+            {/* <GitHub strokeWidth="1.5px" size={60} />
             <Linkedin strokeWidth="1.5px" size={60} />
-            <Twitter strokeWidth="1.5px" size={60} />
+            <Twitter strokeWidth="1.5px" size={60} /> */}
           </div>
         </div>
       </div>

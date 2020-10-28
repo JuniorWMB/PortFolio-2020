@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .home {
   display: flex;
   width: 100vw;
@@ -21,20 +22,28 @@
   width: 50vw;
   height: 50vh;
   display: flex;
-  align-items: center;
-}
-.home__textright {
-  display: flex;
+  /* align-items: center; */
+  margin-top: 2%;
   flex-direction: column;
-  margin-top: 20%;
-  border: 1px solid green;
 }
-.home__social {
-  width: 50%;
-  height: 30%;
+/* .home__textright {
   display: flex;
+} */
+
+.home__social {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  position: relative;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+}
+
+.home__picture {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  object-fit: fill;
 }
 .home__textleft > p {
   font-family: "Titillium Web", sans-serif;
