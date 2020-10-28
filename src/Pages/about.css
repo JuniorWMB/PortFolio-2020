@@ -15,6 +15,16 @@
   padding-top: 2%;
 }
 .header__talktome {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -20px;
+}
+.header__talktome > p {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: justify;
   width: 50%;
 }
 .header__skillsfrontend,
@@ -76,4 +86,11 @@
   font-family: "Titillium Web", sans-serif;
   font-weight: 400;
   font-size: 1rem;
+}
+.home__picture {
+  width: 20vw;
+  height: 20vh;
+  border-radius: 50%;
+  object-fit: inherit;
+  /* box-shadow: 5px 5px 5px grey; */
 }

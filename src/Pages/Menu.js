@@ -6,7 +6,7 @@ import gsap from "gsap";
 import paris from "../assets/parisx.jpeg";
 import marseille from "../assets/marseillex.jpg";
 import london from "../assets/london.jpg";
-import kinshasa from "../assets/kinshasaxxx.jpeg";
+import kinshasa from "../assets/kin.jpeg";
 
 const cities = [
   { name: "Paris", image: paris },
@@ -219,7 +219,7 @@ function Menu({ state }) {
               to="/works"
               className="menu__nav"
             >
-              Works
+              My Work
             </Link>
             <Link
               onMouseEnter={handleHover}

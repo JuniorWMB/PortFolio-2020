@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import React, { useEffect } from "react";
 import "./about.css";
+import Moi from "../assets/me2.jpeg";
 // import react from "../assets/react.png";
 // import reactNative from "../assets/reactnative.png";
 // import javascript from "../assets/javascript.jpg";
@@ -39,10 +40,8 @@ function About() {
             Incidunt quaerat sunt officia eveniet dolores natus sit reiciendis,
             nisi dolorum! Accusamus maxime nisi delectus voluptate unde labore
             praesentium fuga vel itaque. Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Illum qui ea ab iusto numquam aut quia laborum
-            deserunt sapiente architecto hic, minima facilis, vitae incidunt
-            quam eligendi aliquid! Culpa, labo.
           </p>
+          <img className="home__picture" src={Moi} alt="photocv" />
         </div>
         <div className="header__skills">
           <div className="header__skillsfrontend">
@@ -70,10 +69,16 @@ function About() {
             </div>
             <div className="about__skills">
               <div>
-                <h6>Sociability</h6>
-                <h6>Autonomie</h6>
+                <h6>Sociable</h6>
+                <h6>Esprit d'initiative</h6>
                 <h6> Curiosité</h6>
                 <h6>Logique</h6>
+              </div>
+              <div>
+                <h6>Créatif</h6>
+                <h6>Rigoureux</h6>
+                <h6> Autonome</h6>
+                <h6>Esprit d'équipe</h6>
               </div>
             </div>
           </div>

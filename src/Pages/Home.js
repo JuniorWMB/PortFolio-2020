@@ -5,7 +5,7 @@ import "./home.css";
 import me from "../assets/me.jpeg";
 import { TextPlugin } from "gsap/TextPlugin";
 
-const words = ["Junior.", "A React.js Dev.", "A French Dev.", "Free now."];
+const words = ["Junior.", "A React.js Dev.", "A French Dev.", "Available Now."];
 
 function Home() {
   let cursorRef = useRef(null);
@@ -63,26 +63,25 @@ function Home() {
           <div className="home__social">
             {/* <div className="home__barcolortwo"></div>
             <div className="home__barcolorthree"></div> */}
-            <img className="home__picture" src={me} alt="me of me" />
           </div>
         </div>
       </div>
       <div className="home__media">
         <div className="home__mediasocial">
-          <a href="https://github.com/JuniorWMB">
+          <a href="https://github.com/JuniorWMB" target="_blank">
             <GitHub color="black" strokeWidth="1.5px" size={60} />
           </a>
         </div>
         <div className="home__mediasocial">
-          <a href="https://www.linkedin.com/feed/">
+          <a href="https://www.linkedin.com/feed/" target="_blank">
             <Linkedin color="black" strokeWidth="1.5px" size={60} />
           </a>
         </div>
-        <div className="home__mediasocial">
+        {/* <div className="home__mediasocial">
           <a href="">
             <Twitter color="black" strokeWidth="1.5px" size={60} />
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
