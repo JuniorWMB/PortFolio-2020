@@ -81,3 +81,20 @@
 .text {
   margin-left: 10px;
 }
+.home__media {
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  width: 650px;
+  display: flex;
+  justify-content: space-between;
+}
+.home__mediasocial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fed330;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}

@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./about.css";
 // import react from "../assets/react.png";
 // import reactNative from "../assets/reactnative.png";
@@ -46,42 +46,55 @@ function About() {
         </div>
         <div className="header__skills">
           <div className="header__skillsfrontend">
-            <div>
+            <div className="about__title">
               <h1>Frontend Skills</h1>
-              <ul>
-                <li>VanillaJS</li>
-                <li>ReactJS</li>
-                <li>React Native</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Material UI</li>
-                <li>GreenSock</li>
-                <li>Netlify</li>
-                <li>Firebase</li>
-              </ul>
+            </div>
+            <div className="about__skills">
+              <div>
+                <h6>VanillaJS</h6>
+                <h6>ReactJS</h6>
+                <h6>React Native</h6>
+                <h6>HTML & CSS</h6>
+              </div>
+              <div>
+                <h6>Material UI</h6>
+                <h6>GreenSock</h6>
+                <h6>Netlify</h6>
+                <h6>Firebase</h6>
+              </div>
             </div>
           </div>
           <div className="header__skillssoft">
-            <h1>Soft Skills</h1>
-            <ul>
-              <li>Sociability</li>
-              <li>Autonomie</li>
-              <li>Curiosité</li>
-              <li>Logique</li>
-            </ul>
+            <div className="about__title">
+              <h1>Soft Skills</h1>
+            </div>
+            <div className="about__skills">
+              <div>
+                <h6>Sociability</h6>
+                <h6>Autonomie</h6>
+                <h6> Curiosité</h6>
+                <h6>Logique</h6>
+              </div>
+            </div>
           </div>
           <div className="header__skillsbackend">
-            <h1>Backend Skills</h1>
-            <ul>
-              <li>NodeJS</li>
-              <li>Express</li>
-              <li>MongoDB</li>
-              <li>Git</li>
-              <li>Github</li>
-              <li>Heroku</li>
-              <li>Stripe</li>
-              <li>Cloudinary</li>
-            </ul>
+            <div className="about__title">
+              <h1>Backend Skills</h1>
+            </div>
+            <div className="about__skills">
+              <div>
+                <h6>NodeJS</h6>
+                <h6>Express</h6>
+                <h6>MongoDB</h6>
+                <h6>Git</h6>
+              </div>
+              <div>
+                <h6>Github</h6>
+                <h6>Heroku</h6>
+                <h6>Stripe</h6>
+                <h6>Cloudinary</h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>

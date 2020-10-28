@@ -1,19 +1,13 @@
 import gsap from "gsap/gsap-core";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { GitHub, Linkedin, Twitter } from "react-feather";
 import "./home.css";
 import me from "../assets/me.jpeg";
-import meTwo from "../assets/me2.jpeg";
 import { TextPlugin } from "gsap/TextPlugin";
 
 const words = ["Junior.", "A React.js Dev.", "A French Dev.", "Free now."];
 
 function Home() {
-  const [picture, setPicture] = useState({
-    img: me,
-    imgMoi: meTwo,
-  });
-
   let cursorRef = useRef(null);
   let tl = gsap.timeline();
 
@@ -69,25 +63,25 @@ function Home() {
           <div className="home__social">
             {/* <div className="home__barcolortwo"></div>
             <div className="home__barcolorthree"></div> */}
-            <img
-              className="home__picture"
-              src={me}
-              // onMouseEnter={() => {
-              //   setPicture({
-              //     img: me,
-              //   });
-              // }}
-              // onMouseOut={() => {
-              //   setPicture({
-              //     imgMoi: meTwo,
-              //   });
-              // }}
-              alt="me of me"
-            />
-            {/* <GitHub strokeWidth="1.5px" size={60} />
-            <Linkedin strokeWidth="1.5px" size={60} />
-            <Twitter strokeWidth="1.5px" size={60} /> */}
+            <img className="home__picture" src={me} alt="me of me" />
           </div>
+        </div>
+      </div>
+      <div className="home__media">
+        <div className="home__mediasocial">
+          <a href="https://github.com/JuniorWMB">
+            <GitHub color="black" strokeWidth="1.5px" size={60} />
+          </a>
+        </div>
+        <div className="home__mediasocial">
+          <a href="https://www.linkedin.com/feed/">
+            <Linkedin color="black" strokeWidth="1.5px" size={60} />
+          </a>
+        </div>
+        <div className="home__mediasocial">
+          <a href="">
+            <Twitter color="black" strokeWidth="1.5px" size={60} />
+          </a>
         </div>
       </div>
     </div>
