@@ -1,23 +1,108 @@
-import React, { useState } from "react";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 
-let citations = [
-  "pommes",
-  "abricot",
-  "pears",
-  // { key: "1", auteur: "Paul", citation: "je suis un loup" },
-  // { key: "2", auteur: "Louis", citation: "je suis un chien" },
-  // { key: "3", auteur: "Marc", citation: "je suis un loup" },
-  // { key: "4", auteur: "Ben", citation: "je suis un loup" },
-];
-let randomCitation = citations[Math.floor(Math.random() * citations.length)];
+import {
+  Button,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+  createMuiTheme,
+  ThemeProvider,
+} from "@material-ui/core";
+import Test from "../assets/london.jpg";
+
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 245,
+  },
+});
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#000",
+    },
+    secondary: {
+      main: "#fed330",
+    },
+  },
+});
+
 function Works() {
-  const [state, setState] = useState("");
-  setTimeout(() => {}, 3000);
+  const classes = useStyles();
 
   return (
-    <div>
-      <h1>Works</h1>
-    </div>
+    <ThemeProvider muiTheme={theme}>
+      <Card theme="t" className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="200"
+            width="100%"
+            image={Test}
+            title="test"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h6" component="h2">
+              LeBoncoin Réplica
+            </Typography>
+            <CardActions>
+              <Button size="small" color="secondary">
+                See the Stack
+              </Button>
+              <Button>See a Code</Button>
+            </CardActions>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+      <Card theme="t" className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="200"
+            width="100%"
+            image={Test}
+            title="test"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h6" component="h2">
+              LeBoncoin Réplica
+            </Typography>
+            <CardActions>
+              <Button size="small" color="secondary">
+                See the Stack
+              </Button>
+              <Button>See a Code</Button>
+            </CardActions>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+      <Card theme="t" className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="200"
+            width="100%"
+            image={Test}
+            title="test"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h6" component="h2">
+              LeBoncoin Réplica
+            </Typography>
+            <CardActions>
+              <Button size="small" color="secondary">
+                See the Stack
+              </Button>
+              <Button>See a Code</Button>
+            </CardActions>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </ThemeProvider>
   );
 }
 
