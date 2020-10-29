@@ -15,7 +15,7 @@ function Home() {
     gsap.to(cursorRef, { opacity: 0, ease: "power2.inOut", repeat: -1 });
     tl.to(".box", {
       duration: 1,
-      width: "14.5vw",
+      width: "13vw",
       delay: 0.5,
       ease: "power4.inOut",
     })
@@ -73,7 +73,11 @@ function Home() {
           </a>
         </div>
         <div className="home__mediasocial">
-          <a href="https://www.linkedin.com/feed/" target="_blank">
+          <a
+            href="https://www.linkedin.com/feed/"
+            rel="noreferrer"
+            target="_blank"
+          >
             <Linkedin color="black" strokeWidth="1.5px" size={60} />
           </a>
         </div>

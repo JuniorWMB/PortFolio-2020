@@ -44,7 +44,6 @@ function Header({ history }) {
         nameMenu: "Close",
       });
     }
-    console.log("3");
   };
 
   const disabledMenu = () => {

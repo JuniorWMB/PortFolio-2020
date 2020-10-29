@@ -96,20 +96,18 @@ function Menu({ state }) {
       staggerText(line1, line2, line3);
     }
 
-    setInterval(
-      () =>
-        setCitation({
-          message: text[index].message,
-          author: text[index].author,
-        }),
-      9000
-    );
-    return () => {
-      clearInterval(text);
-    };
+    // setInterval(
+    //   () =>
+    //     setCitation({
+    //       message: text[index].message,
+    //       author: text[index].author,
+    //     }),
+    //   9000
+    // );
+    // return () => {
+    //   clearInterval(text);
+    // };
   }, [state]);
-
-  console.log(">>>", citation);
 
   const staggerReveal = (node1, node2) => {
     gsap.from([node1, node2], {
