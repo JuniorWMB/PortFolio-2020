@@ -50,9 +50,13 @@ function Works() {
   const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
-    disabledMenu();
+    // disabledMenu();
     if (view.clicked === false) {
-      gsap.to(stackRef, { duration: 1, css: { display: "none" } });
+      gsap.to(stackRef, {
+        opacity: "0",
+        ease: "power3.inOut",
+        css: { display: "none" },
+      });
     } else if (
       view.clicked === true ||
       (view.clicked === true && view.initial === null)
@@ -60,7 +64,10 @@ function Works() {
       //open menu
       gsap.to(stackRef, {
         duration: 0,
-        css: { display: "block", marginLeft: "20px" },
+        width: 0,
+        easel: "power4.inOut",
+
+        css: { display: "flex", marginLeft: "3px" },
       });
     }
   });
@@ -74,25 +81,28 @@ function Works() {
         clicked: true,
         nameMenu: "Close the Stack",
       });
+      console.log(1);
     } else if (view.clicked === true) {
       setView({
         clicked: !view.clicked,
         nameMenu: "View the Stack",
       });
+      console.log(2);
     } else if (view.clicked === false) {
       setView({
         clicked: !view.clicked,
         nameMenu: "Close the Stack",
       });
+      console.log(3);
     }
   };
 
-  const disabledMenu = () => {
-    setDisabled(!disabled);
-    setTimeout(() => {
-      setDisabled(false);
-    }, 1200);
-  };
+  // const disabledMenu = () => {
+  //   setDisabled(!disabled);
+  //   setTimeout(() => {
+  //     setDisabled(false);
+  //   }, 1200);
+  // };
 
   return (
     <ThemeProvider theme={theme}>
