@@ -18,14 +18,21 @@ import Test from "../assets/london.jpg";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 445,
+    maxWidth: 245,
     display: "flex",
   },
   cardSlide: {
     maxWidth: 200,
-    maxHeight: 300,
-    display: "none",
+    height: 300,
+    display: "flex",
     flexDirection: "column",
+    position: "absolute",
+    zIndex: "9",
+    right: 10,
+  },
+  boxContain: {
+    position: "relative",
+    border: "1px solid green",
   },
 });
 
@@ -42,71 +49,58 @@ const theme = createMuiTheme({
 
 function Works() {
   let stackRef = useRef(null);
+
+  //do me state here
   const [view, setView] = useState({
     initial: false,
     clicked: null,
     nameMenu: "View the Stack",
   });
-  const [disabled, setDisabled] = useState(false);
-
-  useEffect(() => {
-    // disabledMenu();
-    if (view.clicked === false) {
-      gsap.to(stackRef, {
-        opacity: "0",
-        ease: "power3.inOut",
-        css: { display: "none" },
-      });
-    } else if (
-      view.clicked === true ||
-      (view.clicked === true && view.initial === null)
-    ) {
-      //open menu
-      gsap.to(stackRef, {
-        duration: 0,
-        width: 0,
-        easel: "power4.inOut",
-
-        css: { display: "flex", marginLeft: "3px" },
-      });
-    }
-  });
-
-  const classes = useStyles();
-
-  const handleMenu = () => {
+  // do my handle here
+  const handleViewClick = () => {
     if (view.initial === false) {
       setView({
         initial: null,
         clicked: true,
         nameMenu: "Close the Stack",
       });
-      console.log(1);
+      console.log("1");
     } else if (view.clicked === true) {
       setView({
         clicked: !view.clicked,
         nameMenu: "View the Stack",
       });
-      console.log(2);
+      console.log("2");
     } else if (view.clicked === false) {
       setView({
         clicked: !view.clicked,
         nameMenu: "Close the Stack",
       });
-      console.log(3);
+      console.log("3");
     }
   };
 
-  // const disabledMenu = () => {
-  //   setDisabled(!disabled);
-  //   setTimeout(() => {
-  //     setDisabled(false);
-  //   }, 1200);
-  // };
+  //do me UseEffect and gsap here
+
+  useEffect(() => {
+    if (view.clicked === false) {
+      // gsap.to(stackRef, { duration: 1, x: 0 });
+    } else if (
+      view.clicked === true ||
+      (view.clicked === true && view.initial === null)
+    ) {
+      // gsap.to(stackRef, { duration: 1, x: 140 });
+    }
+  });
+
+  const classes = useStyles();
 
   return (
     <ThemeProvider theme={theme}>
-      <Box>
+      <Box
+        className={classes.boxContain}
+        style={{ border: "2px solid red", width: "30%" }}
+      >
         <Box className={classes.root}>
           <Card variant="elevation">
             <CardActionArea>
@@ -122,7 +116,7 @@ function Works() {
               </CardContent>
               <CardActions>
                 <Button
-                  onClick={handleMenu}
+                  onClick={handleViewClick}
                   size="small"
                   color="secondary"
                   variant="outlined"
@@ -135,24 +129,24 @@ function Works() {
               </CardActions>
             </CardActionArea>
           </Card>
-          <Box ref={(el) => (stackRef = el)} className={classes.cardSlide}>
-            <Card>
-              <CardContent>
-                <Typography>
-                  <Box> FrontEnd</Box>
-                  <Box> React</Box>
-                  <Box> HTML & CSS</Box>
-                  <Box> Call API </Box>
-                  <br />
-                  <br />
-                  <Box>BackEnd</Box>
-                  <Box> Nodejs </Box>
-                  <Box> Mongodb</Box>
-                  <Box> Express</Box>
-                </Typography>
-              </CardContent>
-            </Card>
-          </Box>
+        </Box>
+        <Box ref={(el) => (stackRef = el)} className={classes.cardSlide}>
+          <Card>
+            <CardContent>
+              <Typography>
+                <Box> FrontEnd</Box>
+                <Box> React</Box>
+                <Box> HTML & CSS</Box>
+                <Box> Call API </Box>
+                <br />
+                <br />
+                <Box>BackEnd</Box>
+                <Box> Nodejs </Box>
+                <Box> Mongodb</Box>
+                <Box> Express</Box>
+              </Typography>
+            </CardContent>
+          </Card>
         </Box>
       </Box>
     </ThemeProvider>
