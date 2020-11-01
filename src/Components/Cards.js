@@ -20,6 +20,7 @@ function Cards() {
     root: {
       maxWidth: 245,
       display: "flex",
+      marginRight: "150px",
     },
     cardSlide: {
       left: 20,
@@ -30,6 +31,10 @@ function Cards() {
     contain: {
       display: "flex",
       position: "relative",
+      flexDirection: "row",
+      flexWrap: "wrap",
+      border: "3px solid red",
+      width: "1280px",
     },
   });
   const classes = useStyles();
@@ -94,130 +99,134 @@ function Cards() {
     <div style={{ with: "800px" }}>
       <Container className={classes.contain} maxWidth="lg">
         <ThemeProvider theme={theme}>
-          <Box className={classes.root}>
-            <Card>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  image={Test}
-                  width="100%"
-                  height="200"
-                />
-              </CardActionArea>
-              <CardContent>
-                <Typography>LeBoncoin Réplica</Typography>
-                <Box
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <Button
-                    onClick={handleClick}
-                    size="small"
-                    color="secondary"
-                    variant="contained"
+          <div>
+            <Box className={classes.root}>
+              <Card>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    image={Test}
+                    width="100%"
+                    height="200"
+                  />
+                </CardActionArea>
+                <CardContent>
+                  <Typography>LeBoncoin Réplica</Typography>
+                  <Box
+                    style={{ display: "flex", justifyContent: "space-between" }}
                   >
-                    {stack.nameClick}
-                  </Button>
-                  <Button
-                    style={{ marginLeft: "15px" }}
-                    size="small"
-                    color="secondary"
-                    variant="outlined"
-                  >
-                    View the Code
-                  </Button>
-                </Box>
-              </CardContent>
-            </Card>
-          </Box>
-          <Box className={classes.cardSlide}>
-            <Card ref={(el) => (slideRef = el)}>
-              <CardContent>
-                <Typography>
-                  <Box> FrontEnd</Box>
-                  <Box> React</Box>
-                  <Box> HTML & CSS</Box>
-                  <Box> Firebase </Box>
-                  <br />
-                  <Box>BackEnd</Box>
-                  <Box> Nodejs </Box>
-                  <Box> Mongodb</Box>
-                  <Box> Express</Box>
-                  <Box> Stripe</Box>
-                  <Box> Heroku</Box>
-                </Typography>
-              </CardContent>
-            </Card>
-          </Box>
-          {/* second */}
-          <Box className={classes.root}>
-            <Card>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  image={Test}
-                  width="100%"
-                  height="200"
-                />
-              </CardActionArea>
-              <CardContent>
-                <Typography>Covid 19</Typography>
-                <Box
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <Button
-                    onClick={handleClick}
-                    size="small"
-                    color="secondary"
-                    variant="contained"
-                  >
-                    {stack.nameClick}
-                  </Button>
-                  <Button
-                    style={{ marginLeft: "15px" }}
-                    size="small"
-                    color="secondary"
-                    variant="outlined"
-                  >
-                    View the Code
-                  </Button>
-                </Box>
-              </CardContent>
-            </Card>
-          </Box>
-          <Box className={classes.cardSlide}>
-            <Card ref={(el) => (slideRef = el)}>
-              <CardContent>
-                <Typography>
-                  <Box> FrontEnd</Box>
-                  <Box> React</Box>
-                  <Box> HTML & CSS</Box>
-                  <Box> Firebase </Box>
-                  <br />
-                  <Box>BackEnd</Box>
-                  <Box> Nodejs </Box>
-                  <Box> Mongodb</Box>
-                  <Box> Express</Box>
-                  <Box> Stripe</Box>
-                  <Box> Heroku</Box>
-                </Typography>
-              </CardContent>
-            </Card>
-          </Box>
+                    <Button
+                      onClick={handleClick}
+                      size="small"
+                      color="secondary"
+                      variant="contained"
+                    >
+                      {stack.nameClick}
+                    </Button>
+                    <Button
+                      style={{ marginLeft: "15px" }}
+                      size="small"
+                      color="secondary"
+                      variant="outlined"
+                    >
+                      View the Code
+                    </Button>
+                  </Box>
+                </CardContent>
+              </Card>
+              <Box className={classes.cardSlide}>
+                <Card ref={(el) => (slideRef = el)}>
+                  <CardContent>
+                    <Typography>
+                      <Box> FrontEnd</Box>
+                      <Box> React</Box>
+                      <Box> HTML & CSS</Box>
+                      <Box> Firebase </Box>
+                      <br />
+                      <Box>BackEnd</Box>
+                      <Box> Nodejs </Box>
+                      <Box> Mongodb</Box>
+                      <Box> Express</Box>
+                      <Box> Stripe</Box>
+                      <Box> Heroku</Box>
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Box>
+            </Box>
+            {/* second */}
+          </div>
         </ThemeProvider>
+        <Box className={classes.root}>
+          <Card>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                image={Test}
+                width="100%"
+                height="200"
+              />
+            </CardActionArea>
+            <CardContent>
+              <Typography>Covid-19 Tracker</Typography>
+              <Box style={{ display: "flex", justifyContent: "space-between" }}>
+                <Button
+                  onClick={handleClick}
+                  size="small"
+                  color="secondary"
+                  variant="contained"
+                >
+                  {stack.nameClick}
+                </Button>
+                <Button
+                  style={{ marginLeft: "15px" }}
+                  size="small"
+                  color="secondary"
+                  variant="outlined"
+                >
+                  View the Code
+                </Button>
+              </Box>
+            </CardContent>
+          </Card>
+        </Box>
+        {/* second Block */}
+        <Box className={classes.root}>
+          <Card>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                image={Test}
+                width="100%"
+                height="200"
+              />
+            </CardActionArea>
+            <CardContent>
+              <Typography>Marvel Comics</Typography>
+              <Box style={{ display: "flex", justifyContent: "space-between" }}>
+                <Button
+                  onClick={handleClick}
+                  size="small"
+                  color="secondary"
+                  variant="contained"
+                >
+                  {stack.nameClick}
+                </Button>
+                <Button
+                  style={{ marginLeft: "15px" }}
+                  size="small"
+                  color="secondary"
+                  variant="outlined"
+                >
+                  View the Code
+                </Button>
+              </Box>
+            </CardContent>
+          </Card>
+        </Box>
       </Container>
     </div>
   );
-
-  //  <Box className={classes.boxStyle}>
-  //       <Card variant="elevation">
-  //         <CardActionArea>
-  //           <CardMedia
-  //             component="img"
-  //             image={Test}
-  //             width="100%"
-  //             height="200"
-  //           />
-  //         </CardActionArea>
 }
 
 export default Cards;
