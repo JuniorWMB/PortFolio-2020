@@ -12,8 +12,11 @@ import {
   ThemeProvider,
   Button,
 } from "@material-ui/core";
+import "./card.css";
 import gsap from "gsap";
-import Test from "../assets/paris.jpeg";
+import Lbc from "../assets/lbc.jpg";
+import Covid from "../assets/covid.jpg";
+import Marvel from "../assets/marvel3.jpg";
 
 function Cards() {
   const useStyles = makeStyles({
@@ -23,15 +26,14 @@ function Cards() {
       marginRight: "150px",
     },
     cardSlide: {
-      left: 20,
-      marginLeft: "5px",
+      left: 24,
+      marginLeft: "2px",
       position: "absolute",
       zIndex: -1,
-      border: "4px solid blue",
     },
     cardSlide2: {
       left: 420,
-      marginLeft: "5px",
+      marginLeft: "2px",
       position: "absolute",
       zIndex: -1,
     },
@@ -39,7 +41,6 @@ function Cards() {
       left: 810,
       marginLeft: "5px",
       position: "absolute",
-      border: "4px solid blue",
       zIndex: -1,
     },
     contain: {
@@ -47,7 +48,6 @@ function Cards() {
       position: "relative",
       flexDirection: "row",
       flexWrap: "wrap",
-      border: "3px solid red",
       width: "1280px",
     },
   });
@@ -73,7 +73,7 @@ function Cards() {
   const [stack2, setStack2] = useState({
     initial: false,
     clicked: null,
-    nameClick: "View the Stack2",
+    nameClick: "View the Stack",
   });
   const [stack3, setStack3] = useState({
     initial: false,
@@ -89,20 +89,16 @@ function Cards() {
         clicked: true,
         nameClick: "Close the Stack",
       });
-
-      console.log("Click 1");
     } else if (stack.clicked === true) {
       setStack({
         clicked: !stack.clicked,
         nameClick: "View the Stack",
       });
-      console.log("Click 2");
     } else if (stack.clicked === false) {
       setStack({
         clicked: !stack.clicked,
         nameClick: "Close the Stack",
       });
-      console.log("Click 3");
     }
   };
   const handleClick2 = () => {
@@ -112,19 +108,16 @@ function Cards() {
         clicked: true,
         nameClick: "Close the Stack",
       });
-      console.log("Click 1");
     } else if (stack2.clicked === true) {
       setStack2({
         clicked: !stack2.clicked,
         nameClick: "View the Stack",
       });
-      console.log("Click 2");
     } else if (stack2.clicked === false) {
       setStack2({
         clicked: !stack2.clicked,
         nameClick: "Close the Stack",
       });
-      console.log("Click 3");
     }
   };
 
@@ -135,24 +128,23 @@ function Cards() {
         clicked: true,
         nameClick: "Close the Stack",
       });
-      console.log("Click 1");
     } else if (stack3.clicked === true) {
       setStack3({
         clicked: !stack3.clicked,
         nameClick: "View the Stack",
       });
-      console.log("Click 2");
     } else if (stack3.clicked === false) {
       setStack3({
         clicked: !stack3.clicked,
         nameClick: "Close the Stack",
       });
-      console.log("Click 3");
     }
   };
 
   //useRef
   let slideRef = useRef(null);
+  let slideRef2 = useRef(null);
+  let slideRef3 = useRef(null);
 
   //use my useEffect below
 
@@ -165,18 +157,42 @@ function Cards() {
     ) {
       gsap.to(slideRef, { duration: 1, x: 250, backgroundColor: "orange" });
     }
+
     if (stack2.clicked === false) {
-      gsap.to(slideRef, { duration: 1, x: 0, backgroundColor: "blue" });
+      gsap.to(slideRef2, { duration: 1, x: 0, backgroundColor: "blue" });
     } else if (
       stack2.clicked === true ||
       (stack2.clicked === true && stack2.initial === null)
     ) {
-      gsap.to(slideRef, { duration: 1, x: 250, backgroundColor: "orange" });
+      gsap.to(slideRef2, { duration: 1, x: 250, backgroundColor: "orange" });
     }
+
+    if (stack3.clicked === false) {
+      gsap.to(slideRef3, { duration: 1, x: 0, backgroundColor: "blue" });
+    } else if (
+      stack3.clicked === true ||
+      (stack3.clicked === true && stack3.initial === null)
+    ) {
+      gsap.to(slideRef3, { duration: 1, x: 250, backgroundColor: "orange" });
+    }
+
+    // if (stack2.clicked === false) {
+    //   gsap.to(slideRef, { duration: 1, x: 0, backgroundColor: "blue" });
+    // } else if (
+    //   stack2.clicked === true ||
+    //   (stack2.clicked === true && stack2.initial === null)
+    // ) {
+    //   gsap.to(slideRef, { duration: 1, x: 250, backgroundColor: "orange" });
+    // }
   });
 
   return (
-    <div style={{ with: "800px" }}>
+    <div style={{ with: "800px", marginLeft: "135px" }}>
+      <div className="card__background"></div>
+      <div style={{ marginBottom: "100px", marginLeft: "24px" }}>
+        <h1 className="card__title">My Works</h1>
+      </div>
+
       <Container className={classes.contain} maxWidth="lg">
         <ThemeProvider theme={theme}>
           <div>
@@ -185,7 +201,7 @@ function Cards() {
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    image={Test}
+                    image={Lbc}
                     width="100%"
                     height="200"
                   />
@@ -218,17 +234,17 @@ function Cards() {
                 <Card ref={(el) => (slideRef = el)}>
                   <CardContent>
                     <Typography>
-                      <Box> FrontEnd</Box>
+                      <Box className="title"> FEATURES</Box>
+                      <Box> Login/SignUp</Box>
+                      <Box> Offers/Offer</Box>
+                      <Box> Upload </Box>
+                      <Box> Payment </Box>
+                      <Box className="title">STACK</Box>
                       <Box> React</Box>
-                      <Box> HTML & CSS</Box>
-                      <Box> Firebase </Box>
-                      <br />
-                      <Box>BackEnd</Box>
                       <Box> Nodejs </Box>
-                      <Box> Mongodb</Box>
-                      <Box> Express</Box>
                       <Box> Stripe</Box>
                       <Box> Heroku</Box>
+                      <Box> </Box>
                     </Typography>
                   </CardContent>
                 </Card>
@@ -239,14 +255,20 @@ function Cards() {
         </ThemeProvider>
         <Box className={classes.root}>
           <Card>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                image={Test}
-                width="100%"
-                height="200"
-              />
-            </CardActionArea>
+            <a
+              href="https://covid-19-tracker-4b79f.web.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  image={Covid}
+                  width="100%"
+                  height="200"
+                />
+              </CardActionArea>
+            </a>
             <CardContent>
               <Typography>Covid-19 Tracker</Typography>
               <Box style={{ display: "flex", justifyContent: "space-between" }}>
@@ -258,32 +280,38 @@ function Cards() {
                 >
                   {stack2.nameClick}
                 </Button>
-                <Button
-                  style={{ marginLeft: "15px" }}
-                  size="small"
-                  color="secondary"
-                  variant="outlined"
+                <a
+                  href="https://github.com/JuniorWMB/Covid-19Tracker-api"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  View the Code
-                </Button>
+                  <Button
+                    style={{ marginLeft: "15px" }}
+                    size="small"
+                    color="secondary"
+                    variant="outlined"
+                  >
+                    View the Code
+                  </Button>
+                </a>
               </Box>
             </CardContent>
           </Card>
           <Box className={classes.cardSlide2}>
-            <Card ref={(el) => (slideRef = el)}>
+            <Card ref={(el) => (slideRef2 = el)}>
               <CardContent>
                 <Typography>
-                  <Box> FrontEnd</Box>
-                  <Box> React</Box>
-                  <Box> HTML & CSS</Box>
-                  <Box> Firebase </Box>
+                  <Box className="title"> FEATURES</Box>
+                  <Box> Search Covid</Box>
+                  <Box> By Countries</Box>
+                  <Box>View a stat</Box>
                   <br />
-                  <Box>BackEnd</Box>
-                  <Box> Nodejs </Box>
-                  <Box> Mongodb</Box>
-                  <Box> Express</Box>
-                  <Box> Stripe</Box>
-                  <Box> Heroku</Box>
+                  <Box className="title">STACK</Box>
+                  <Box> React </Box>
+                  <Box> Material UI</Box>
+                  <Box> Chart.js</Box>
+                  <Box> Leaflet</Box>
+                  <Box> Firebase</Box>
                 </Typography>
               </CardContent>
             </Card>
@@ -295,7 +323,7 @@ function Cards() {
             <CardActionArea>
               <CardMedia
                 component="img"
-                image={Test}
+                image={Marvel}
                 width="100%"
                 height="200"
               />
@@ -323,19 +351,19 @@ function Cards() {
             </CardContent>
           </Card>
           <Box className={classes.cardSlide3}>
-            <Card ref={(el) => (slideRef = el)}>
+            <Card ref={(el) => (slideRef3 = el)}>
               <CardContent>
                 <Typography>
-                  <Box> FrontEnd</Box>
-                  <Box> React</Box>
-                  <Box> HTML & CSS</Box>
-                  <Box> Firebase </Box>
+                  <Box className="title"> FEATURES</Box>
+                  <Box> Login/SignUp</Box>
+                  <Box> Books and Comics</Box>
+                  <Box> Favoris </Box>
                   <br />
-                  <Box>BackEnd</Box>
-                  <Box> Nodejs </Box>
-                  <Box> Mongodb</Box>
+                  <Box className="title">STACK</Box>
+                  <Box> Reactjs </Box>
+                  <Box> Nodejs</Box>
                   <Box> Express</Box>
-                  <Box> Stripe</Box>
+                  <Box> Js-Cookie</Box>
                   <Box> Heroku</Box>
                 </Typography>
               </CardContent>
