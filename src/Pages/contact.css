@@ -10,7 +10,7 @@
 .contact__workwithme > p {
   font-family: "Titillium Web", sans-serif;
   font-weight: 900;
-  font-size: 2.83rem;
+  font-size: 2rem;
 }
 .contact__workwithme {
   display: flex;
@@ -29,11 +29,37 @@
 .form__input {
   border: none;
   border-bottom: solid 5px #fed330;
-  width: 50%;
+  width: "20%";
   outline: none;
   font-weight: 400;
   font-size: 40px;
   padding: 0 10px;
+  caret-color: #fed330;
+  color: #fed330;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3rem;
+}
+.form__inputthree {
+  border: none;
+  border-bottom: solid 5px #fed330;
+  width: 550px;
+  outline: none;
+  font-weight: 400;
+  font-size: 40px;
+  padding: 0 10px;
+  caret-color: #fed330;
+  color: #fed330;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3rem;
+}
+.form__inputtwo {
+  border: none;
+  border-bottom: solid 5px #fed330;
+  width: 250px;
+  outline: none;
+  font-weight: 400;
+  font-size: 40px;
+  padding: 0 30px;
   caret-color: #fed330;
   color: #fed330;
 }

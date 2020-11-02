@@ -219,14 +219,20 @@ function Cards() {
                     >
                       {stack.nameClick}
                     </Button>
-                    <Button
-                      style={{ marginLeft: "15px" }}
-                      size="small"
-                      color="secondary"
-                      variant="outlined"
+                    <a
+                      href="https://github.com/JuniorWMB/LBC-app"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      View the Code
-                    </Button>
+                      <Button
+                        style={{ marginLeft: "15px" }}
+                        size="small"
+                        color="secondary"
+                        variant="outlined"
+                      >
+                        View the Code
+                      </Button>
+                    </a>
                   </Box>
                 </CardContent>
               </Card>

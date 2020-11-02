@@ -88,9 +88,9 @@
   font-size: 1rem;
 }
 .home__picture {
-  width: 20vw;
-  height: 20vh;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
   border-radius: 50%;
-  object-fit: inherit;
   /* box-shadow: 5px 5px 5px grey; */
 }

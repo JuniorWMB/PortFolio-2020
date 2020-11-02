@@ -14,7 +14,6 @@ import {
 } from "@material-ui/core";
 
 import { ThemeProvider, makeStyles } from "@material-ui/core/styles";
-import Test from "../assets/london.jpg";
 import Cards from "../Components/Cards";
 
 const useStyles = makeStyles({
@@ -127,54 +126,6 @@ function Works() {
   return (
     <ThemeProvider theme={theme}>
       <Cards />
-      {/* <div style={{ width: "600px", border: "2px solid red" }}>
-        <Box className={classes.boxStyle}>
-          <Card variant="elevation">
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                image={Test}
-                width="100%"
-                height="200"
-              />
-            </CardActionArea>
-            <CardContent>
-              <Typography>Leboncoin Réplica</Typography>
-              <Box style={{ display: "flex", justifyContent: "space-between" }}>
-                <Button
-                  onClick={handleViewClick}
-                  size="medium"
-                  color="secondary"
-                  variant="contained"
-                >
-                  {view.nameMenu}
-                </Button>
-                <Button size="medium" color="secondary" variant="outlined">
-                  View the Code
-                </Button>
-              </Box>
-            </CardContent>
-          </Card>
-          <Box ref={(el) => (stackRef = el)} className={classes.cardSlide}>
-            <Card>
-              <CardContent>
-                <Typography>
-                  <Box> FrontEnd</Box>
-                  <Box> React</Box>
-                  <Box> HTML & CSS</Box>
-                  <Box> Call API </Box>
-                  <br />
-                  <br />
-                  <Box>BackEnd</Box>
-                  <Box> Nodejs </Box>
-                  <Box> Mongodb</Box>
-                  <Box> Express</Box>
-                </Typography>
-              </CardContent>
-            </Card>
-          </Box>
-        </Box>
-      </div> */}
     </ThemeProvider>
   );
 }
