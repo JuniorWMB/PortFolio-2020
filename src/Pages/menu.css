@@ -44,6 +44,7 @@
   padding: 0 90px;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 .menu__nav {
   font-family: "Titillium Web", sans-serif;
@@ -58,9 +59,18 @@
 .menu__right > p {
   font-family: "Titillium Web", sans-serif;
   font-weight: 600;
+  font-size: 20px;
   text-align: justify;
   color: white;
-  margin-top: 100px;
+  margin-top: 300px;
+}
+.menu__right > h4 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
 }
 .menu__location {
   display: flex;

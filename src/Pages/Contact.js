@@ -39,7 +39,7 @@ function Contact() {
   //state
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [number, setNumber] = useState("");
+  const [mobile, setMobile] = useState("");
 
   // const handleSend = () => {
   //   gsap.from(arrowSendRef, { duration: 1, ease: "powe3.inOut", width: 0 });

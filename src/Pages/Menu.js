@@ -6,7 +6,7 @@ import gsap from "gsap";
 import paris from "../assets/parisx.jpeg";
 import marseille from "../assets/marseillex.jpg";
 import london from "../assets/london.jpg";
-import kinshasa from "../assets/kin.jpeg";
+import kinshasa from "../assets/kinshasaxxx.jpeg";
 
 const cities = [
   { name: "Paris", image: paris },
@@ -230,20 +230,18 @@ function Menu({ state }) {
             </Link>
           </div>
           <div ref={(el) => (info = el)} className="menu__right">
-            {/* <p>
-              Lorem ipsum <b> dolor </b> sit amet consectetur adipisicing elit.
-              <b> Voluptatum </b>
-              quae ea architecto sint fuga facere quas eligendi ad laudantium
-              minima. Saepe et itaque eius nesciunt dignissimos esse
-              <b> numquam </b>
-              laboriosam ipsam!
-            </p> */}
-            <p>{citation.message}</p>
-            <p>{citation.author}</p>
+            <p>
+              " Be not afraid of greatness. Some are born great, some achieve
+              greatness, and others have greatness thrust upon them. "
+            </p>
+            <h4>William Shakespeare</h4>
           </div>
         </div>
         <div className="menu__location">
-          <p>I can work here:</p>
+          <p>
+            I can work from these cities, hover over the names to see some magic
+            :
+          </p>
           {cities.map((el) => (
             <span
               key={el.name}
