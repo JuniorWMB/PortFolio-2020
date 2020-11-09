@@ -72,9 +72,21 @@
   width: 100%;
 }
 
-.contact__form > button > p {
+/* .contact__form > button > p {
   font-family: "Titillium Web", sans-serif;
   font-weight: 400;
   cursor: pointer;
   font-size: 1.5rem;
+} */
+.contact__btnsubmit {
+  border: 2px solid black;
+  width: 50px;
+  height: 50px;
+  background-color: lawngreen;
+  color: red;
+}
+.error {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 0.3rem;
+  color: red;
 }
