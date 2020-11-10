@@ -105,3 +105,44 @@
   width: 100px;
   height: 100px;
 }
+
+@media (min-width: 400px) and (max-width: 636px) {
+  .home__textleft {
+    height: 79px;
+    width: 140vw;
+    left: 0px;
+  }
+  .home__textleft {
+    position: relative;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    margin-left: 100px;
+    overflow: hidden;
+    width: 1200px;
+  }
+  .home__textleft .box {
+    position: absolute;
+    bottom: 30px;
+    display: inline-block;
+    background: #fed330;
+    width: 8px;
+    height: 1vh;
+    z-index: -1;
+  }
+  .home__media {
+    left: -50px;
+    display: flex;
+    justify-content: center;
+  }
+  .home__mediasocial {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 637px) and (max-width: 768px) {
+}
+@media (min-width: 769px) and (max-width: 1018px) {
+}

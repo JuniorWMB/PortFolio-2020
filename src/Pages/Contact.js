@@ -6,9 +6,11 @@ import { createMuiTheme } from "@material-ui/core";
 import { ThemeProvider, makeStyles } from "@material-ui/core/styles";
 
 import "./contact.css";
+import { useHistory } from "react-router-dom";
 
 function Contact() {
   let arrowRef = useRef(null);
+  const history = useHistory();
   useEffect(() => {
     gsap.from(arrowRef, {
       duration: 0.7,
@@ -18,28 +20,36 @@ function Contact() {
     });
   });
 
-  const useStyles = makeStyles((theme) => ({
-    button: {},
-  }));
+  let time = () => {
+    setTimeout(() => {
+      history.push("/menu");
+    }, 4000);
+  };
 
-  const theme = createMuiTheme({
-    palette: {
-      primary: {
-        main: "#000",
-      },
-      secondary: {
-        main: "#fed330",
-      },
-    },
-  });
+  // const useStyles = makeStyles((theme) => ({
+  //   button: {},
+  // }));
 
-  const classes = useStyles();
+  // const theme = createMuiTheme({
+  //   palette: {
+  //     primary: {
+  //       main: "#000",
+  //     },
+  //     secondary: {
+  //       main: "#fed330",
+  //     },
+  //   },
+  // });
+
+  // const classes = useStyles();
 
   //state
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
+  const [sendText, setSendText] = useState(false);
   const [errorText, setErrorText] = useState("");
+  const [disable, setDisable] = useState(false);
 
   //creat my handle
   const handleClick = () => {
@@ -57,7 +67,7 @@ function Contact() {
   };
 
   const handleSubmit = async (e) => {
-    // e.target.reset();
+    e.target.reset();
     e.preventDefault();
 
     if (name && email && mobile) {
@@ -69,6 +79,9 @@ function Contact() {
           mobile,
         }
       );
+      setSendText(true);
+      setDisable(true);
+      time();
     } else {
       setErrorText("Alfred something missing !");
     }
@@ -137,6 +150,9 @@ function Contact() {
                 outline: "none",
                 cursor: "pointer",
                 color: "white",
+                position: "absolute",
+                right: "100px",
+                bottom: "70px",
               }}
               type="submit"
               onClick={handleClick}
@@ -146,28 +162,12 @@ function Contact() {
           </p>
         )}
 
-        {/* 
-        <ThemeProvider theme={theme}>
-          <Button
-          type=""
-            className={classes.button}
-            variant="contained"
-            color="secondary"
-            size="small"
-            style={{
-              width: "150px",
-              display: "flex",
-              justifyContent: "center",
-              backGround: "red",
-              position: "absolute",
-              left: "1160px",
-            }}
-          >
-            Send
-          </Button>
-        </ThemeProvider> */}
+        {sendText ? (
+          <p style={{ color: "green" }}>Message send thank's</p>
+        ) : null}
         {!errorText && (
           <button
+            className="btn__send"
             style={{
               width: "300px",
               height: "50px",
@@ -180,8 +180,12 @@ function Contact() {
               outline: "none",
               cursor: "pointer",
               color: "white",
+              position: "absolute",
+              right: "100px",
+              bottom: "70px",
             }}
             type="submit"
+            disabled={disable}
           >
             <h1> Send</h1>
           </button>

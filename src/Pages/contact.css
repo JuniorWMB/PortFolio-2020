@@ -25,6 +25,7 @@
   font-family: "Titillium Web", sans-serif;
   font-weight: 400;
   font-size: 3rem;
+  color: black;
 }
 .form__input {
   border: none;
@@ -35,7 +36,7 @@
   font-size: 40px;
   padding: 0 10px;
   caret-color: #fed330;
-  color: #fed330;
+
   font-family: "Titillium Web", sans-serif;
   font-size: 3rem;
 }
@@ -48,7 +49,7 @@
   font-size: 40px;
   padding: 0 10px;
   caret-color: #fed330;
-  color: #fed330;
+
   font-family: "Titillium Web", sans-serif;
   font-size: 3rem;
 }
@@ -61,7 +62,6 @@
   font-size: 40px;
   padding: 0 30px;
   caret-color: #fed330;
-  color: #fed330;
 }
 .contact__form > button {
   border: none;
@@ -70,6 +70,8 @@
   align-items: center;
   justify-content: flex-end;
   width: 100%;
+  margin-left: 700px;
+  border: blue 2px solid;
 }
 
 /* .contact__form > button > p {
@@ -89,4 +91,12 @@
   font-family: "Titillium Web", sans-serif;
   font-size: 0.3rem;
   color: red;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Rules */
+  /* .contact__form > button {
+    margin: 10px 0 0 100px;
+  } */
 }
