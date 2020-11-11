@@ -12,3 +12,7 @@
   color: white;
   font-family: "Titillium Web", sans-serif;
 }
+.column {
+  display: flex;
+  flex-direction: column;
+}

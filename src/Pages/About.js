@@ -2,11 +2,6 @@ import gsap from "gsap";
 import React, { useEffect } from "react";
 import "./about.css";
 import Moi from "../assets/me2.jpeg";
-// import react from "../assets/react.png";
-// import reactNative from "../assets/reactnative.png";
-// import javascript from "../assets/javascript.jpg";
-// import htmlandcss from "../assets/htmlandcss.jpg";
-// import node from "../assets/node.jpg";
 
 function About() {
   let tl = gsap.timeline();
@@ -36,18 +31,21 @@ function About() {
       <div className="header__wrapper">
         <div className="header__talktome">
           <p>
-            Après different experiences, j'ai decidé de revenir à mon amour de
-            jeunesse ! Le dévelopement web.
+            Après differentes expériences, j'ai decidé de revenir à mon amour de
+            jeunesse: le dévelopement web.
+            <b className="about__bold "> Sociable, dynamique, curieux </b>et
+            toujours partant pour du pair programming, j'ai pu acquérir ces
+            derniers mois de nombreuses connaissances de manière autonome mais
+            aussi en équipe. <b className="about__bold "> </b>
             <br />
-            <b className="about__bold ">Sociable, dynamique, curieu </b>et
-            toujours partant pour du pair programming, j'ai su apprendre
-            intélligement seul et en equipe de nombreuse connaissance en{" "}
-            <b className="about__bold ">Javascript </b> (je ne suis qu'au debut
-            de la route mais rome ne s'est pas fait en 1jour).{" "}
-            <b className="about__bold ">Passionné </b> de manga, serie et de
-            lecture divers (oui de la documentation aussi evidement). Adapte de
-            la <b>veuille</b> compulsif sur <b>Medium, Youtube, Twitter </b> (
-            oui je stalk <b> Dan Abramov</b> chut !!!).
+            Je ne suis qu'au début de mon chemin mais comme on dit "Rome ne
+            s'est pas construite en 1 jour".{" "}
+            <b className="about__bold ">Passionné </b> de manga, de series et de
+            lecture, je suis un grand adepte de la
+            <b className="about__bold "> veille technologique</b>: Medium,
+            Youtube et Twitter sont mes terrains d'explorations favoris (Et oui,
+            je stalk <b className="about__bold "> Dan Abramov</b>{" "}
+            <span>🤫</span> ).
           </p>
           <img className="home__picture" src={Moi} alt="photocv" />
         </div>
@@ -58,7 +56,7 @@ function About() {
             </div>
             <div className="about__skills">
               <div>
-                <h6>VanillaJS</h6>
+                <h6>Typescript</h6>
                 <h6>ReactJS</h6>
                 <h6>React Native</h6>
                 <h6>HTML & CSS</h6>

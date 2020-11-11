@@ -20,6 +20,10 @@
 }
 .contact__form {
   padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .contact__form > p {
   font-family: "Titillium Web", sans-serif;
@@ -63,7 +67,7 @@
   padding: 0 30px;
   caret-color: #fed330;
 }
-.contact__form > button {
+/* .contact__form > button {
   border: none;
   background: none;
   display: flex;
@@ -72,7 +76,7 @@
   width: 100%;
   margin-left: 700px;
   border: blue 2px solid;
-}
+} */
 
 /* .contact__form > button > p {
   font-family: "Titillium Web", sans-serif;
@@ -89,14 +93,30 @@
 }
 .error {
   font-family: "Titillium Web", sans-serif;
-  font-size: 0.3rem;
+  font-size: 2rem;
   color: red;
 }
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  /* Rules */
-  /* .contact__form > button {
-    margin: 10px 0 0 100px;
-  } */
+.btn__send {
+  width: 50%;
+  height: 20%;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fed330;
+  cursor: pointer;
+  outline: none;
+}
+.btn__nosend {
+  width: 70%;
+  height: 40%;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  cursor: pointer;
+  outline: none;
 }

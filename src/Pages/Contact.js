@@ -1,9 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
-import { ArrowDownCircle, Check, ArrowRightCircle } from "react-feather";
+import { ArrowDownCircle } from "react-feather";
 import gsap from "gsap";
 import axios from "axios";
-import { createMuiTheme } from "@material-ui/core";
-import { ThemeProvider, makeStyles } from "@material-ui/core/styles";
 
 import "./contact.css";
 import { useHistory } from "react-router-dom";
@@ -22,26 +20,9 @@ function Contact() {
 
   let time = () => {
     setTimeout(() => {
-      history.push("/menu");
-    }, 4000);
+      history.push("/about");
+    }, 3000);
   };
-
-  // const useStyles = makeStyles((theme) => ({
-  //   button: {},
-  // }));
-
-  // const theme = createMuiTheme({
-  //   palette: {
-  //     primary: {
-  //       main: "#000",
-  //     },
-  //     secondary: {
-  //       main: "#fed330",
-  //     },
-  //   },
-  // });
-
-  // const classes = useStyles();
 
   //state
   const [name, setName] = useState("");
@@ -135,58 +116,21 @@ function Contact() {
           <br />
         </p>
         {errorText && (
-          <p className="error">
-            {errorText}
-            <button
-              style={{
-                width: "300px",
-                height: "50px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                borderRadius: "20px",
-                backgroundColor: "red",
-                border: "none",
-                outline: "none",
-                cursor: "pointer",
-                color: "white",
-                position: "absolute",
-                right: "100px",
-                bottom: "70px",
-              }}
-              type="submit"
-              onClick={handleClick}
-            >
+          <div>
+            <p className="error">{errorText}</p>
+            <button className="btn__nosend" type="submit" onClick={handleClick}>
               <h1> Try again !</h1>
             </button>
-          </p>
+          </div>
         )}
 
         {sendText ? (
-          <p style={{ color: "green" }}>Message send thank's</p>
+          <p style={{ color: "green", fontSize: "1.4rem" }}>
+            Message sent thanks <span> 😉 </span>
+          </p>
         ) : null}
         {!errorText && (
-          <button
-            className="btn__send"
-            style={{
-              width: "300px",
-              height: "50px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              borderRadius: "20px",
-              backgroundColor: "#fed330",
-              border: "none",
-              outline: "none",
-              cursor: "pointer",
-              color: "white",
-              position: "absolute",
-              right: "100px",
-              bottom: "70px",
-            }}
-            type="submit"
-            disabled={disable}
-          >
+          <button className="btn__send" type="submit" disabled={disable}>
             <h1> Send</h1>
           </button>
         )}

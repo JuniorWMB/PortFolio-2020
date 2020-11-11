@@ -15,50 +15,7 @@ const cities = [
   { name: "Kinshasa", image: kinshasa },
 ];
 
-const text = [
-  {
-    key: 6,
-    author: "luck",
-    message: "Most of the important things in the world have b",
-  },
-  {
-    key: 5,
-    author: "Junior",
-    message: "Most of the important things in the world have b",
-  },
-  {
-    key: 1,
-    author: ".Dale Carnegie",
-    message:
-      "Most of the important things in the world have been accomplished by people who have kept on trying when there seemed to be no hope at all.",
-  },
-  {
-    key: 2,
-    author: "ok",
-    message: "The saliva that flows now will become the tears of joy tomorrow.",
-  },
-  {
-    key: 3,
-    author: "Martin Luther King, Jr.",
-    message:
-      "The ultimate measure of a man is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.",
-  },
-  {
-    key: 4,
-    author: "Confucius.",
-    message:
-      "Our greatest glory is not in never falling, but in rising every time we fall. ",
-  },
-];
-
 function Menu({ state }) {
-  const [citation, setCitation] = useState({
-    message: "",
-    author: "",
-  });
-
-  const index = Math.floor(Math.random() * 6);
-
   // Vars for our animated dom nodes
   let menu = useRef(null);
   let revealMenu = useRef(null);
@@ -95,18 +52,6 @@ function Menu({ state }) {
       fadeUp(info);
       staggerText(line1, line2, line3);
     }
-
-    // setInterval(
-    //   () =>
-    //     setCitation({
-    //       message: text[index].message,
-    //       author: text[index].author,
-    //     }),
-    //   9000
-    // );
-    // return () => {
-    //   clearInterval(text);
-    // };
   }, [state]);
 
   const staggerReveal = (node1, node2) => {
@@ -239,8 +184,8 @@ function Menu({ state }) {
         </div>
         <div className="menu__location">
           <p>
-            I can work from these cities, hover over the names to see some magic
-            :
+            Want to see some magics? Hover over a city to see where I can work
+            from :
           </p>
           {cities.map((el) => (
             <span

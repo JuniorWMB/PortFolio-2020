@@ -8,8 +8,6 @@ import {
   Typography,
   createMuiTheme,
   makeStyles,
-  Container,
-  ThemeProvider,
   Button,
 } from "@material-ui/core";
 import "./card.css";
@@ -155,7 +153,7 @@ function Cards() {
       stack.clicked === true ||
       (stack.clicked === true && stack.initial === null)
     ) {
-      gsap.to(slideRef, { duration: 1, x: 250, backgroundColor: "orange" });
+      gsap.to(slideRef, { duration: 1, x: 230, backgroundColor: "orange" });
     }
 
     if (stack2.clicked === false) {
@@ -164,7 +162,7 @@ function Cards() {
       stack2.clicked === true ||
       (stack2.clicked === true && stack2.initial === null)
     ) {
-      gsap.to(slideRef2, { duration: 1, x: 250, backgroundColor: "orange" });
+      gsap.to(slideRef2, { duration: 1, x: 230, backgroundColor: "orange" });
     }
 
     if (stack3.clicked === false) {
@@ -175,37 +173,34 @@ function Cards() {
     ) {
       gsap.to(slideRef3, { duration: 1, x: 250, backgroundColor: "orange" });
     }
-
-    // if (stack2.clicked === false) {
-    //   gsap.to(slideRef, { duration: 1, x: 0, backgroundColor: "blue" });
-    // } else if (
-    //   stack2.clicked === true ||
-    //   (stack2.clicked === true && stack2.initial === null)
-    // ) {
-    //   gsap.to(slideRef, { duration: 1, x: 250, backgroundColor: "orange" });
-    // }
   });
 
   return (
     <div style={{ with: "800px", marginLeft: "135px" }}>
       <div className="card__background"></div>
       <div style={{ marginBottom: "100px", marginLeft: "24px" }}>
-        <h1 className="card__title">My Works</h1>
+        <h1 className="card__title">My Work</h1>
       </div>
 
-      <Container className={classes.contain} maxWidth="lg">
-        <ThemeProvider theme={theme}>
+      <div className={classes.contain} maxWidth="lg">
+        <div className="column" theme={theme}>
           <div>
             <Box className={classes.root}>
               <Card>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    image={Lbc}
-                    width="100%"
-                    height="200"
-                  />
-                </CardActionArea>
+                <a
+                  href="https://quirky-carson-563fc0.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      image={Lbc}
+                      width="100%"
+                      height="200"
+                    />
+                  </CardActionArea>
+                </a>
                 <CardContent>
                   <Typography>LeBoncoin Réplica</Typography>
                   <Box
@@ -258,7 +253,7 @@ function Cards() {
             </Box>
             {/* second */}
           </div>
-        </ThemeProvider>
+        </div>
         <Box className={classes.root}>
           <Card>
             <a
@@ -376,7 +371,7 @@ function Cards() {
             </Card>
           </Box>
         </Box>
-      </Container>
+      </div>
     </div>
   );
 }
