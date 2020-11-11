@@ -88,12 +88,47 @@
   font-size: 1rem;
 }
 .home__picture {
-  width: 150px;
-  height: 150px;
+  width: 350px;
+  height: 350px;
   object-fit: cover;
   border-radius: 50%;
   /* box-shadow: 5px 5px 5px grey; */
 }
 .about__bold {
   color: #fed330;
+}
+
+/*media quieries*/
+
+@media (min-width: 400px) and (max-width: 856px) {
+  .header__talktome {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .header__talktome > p {
+    width: 90%;
+  }
+  .header__skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 60%;
+    margin-top: 2%;
+  }
+  .about__skills {
+    height: 70%;
+    /* display: flex;
+    justify-content: center;
+    justify-content: space-around; */
+  }
+  .header__skillssoft {
+    margin: 20px 0;
+  }
+}
+
+@media (min-width: 637px) and (max-width: 768px) {
+}
+@media (min-width: 769px) and (max-width: 1018px) {
 }
