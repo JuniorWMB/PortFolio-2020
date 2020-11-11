@@ -36,10 +36,18 @@ function About() {
       <div className="header__wrapper">
         <div className="header__talktome">
           <p>
-            im Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Incidunt quaerat sunt officia eveniet dolores natus sit reiciendis,
-            nisi dolorum! Accusamus maxime nisi delectus voluptate unde labore
-            praesentium fuga vel itaque. Lorem ipsum dolor sit amet consectetur,
+            Après different experiences, j'ai decidé de revenir à mon amour de
+            jeunesse ! Le dévelopement web.
+            <br />
+            <b className="about__bold ">Sociable, dynamique, curieu </b>et
+            toujours partant pour du pair programming, j'ai su apprendre
+            intélligement seul et en equipe de nombreuse connaissance en{" "}
+            <b className="about__bold ">Javascript </b> (je ne suis qu'au debut
+            de la route mais rome ne s'est pas fait en 1jour).{" "}
+            <b className="about__bold ">Passionné </b> de manga, serie et de
+            lecture divers (oui de la documentation aussi evidement). Adapte de
+            la <b>veuille</b> compulsif sur <b>Medium, Youtube, Twitter </b> (
+            oui je stalk <b> Dan Abramov</b> chut !!!).
           </p>
           <img className="home__picture" src={Moi} alt="photocv" />
         </div>
