@@ -18,7 +18,7 @@ function App() {
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
   useEffect(() => {
-    document.title = "Voici mon portfolio";
+    document.title = "My Portfolio";
   });
 
   return (
