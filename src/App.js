@@ -1,5 +1,7 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
+import ReactGa from "react-ga";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
@@ -8,10 +10,14 @@ import About from "./Pages/About";
 import Works from "./Pages/Works";
 
 // import de mes dependences
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Contact from "./Pages/Contact";
 
 function App() {
+  useEffect(() => {
+    ReactGa.initialize("code here");
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <Router>
       <div className="App">

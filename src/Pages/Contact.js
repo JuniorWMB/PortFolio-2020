@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { ArrowDownCircle } from "react-feather";
 import gsap from "gsap";
 import axios from "axios";
+import ReactGA from "react-ga";
 
 import "./contact.css";
 import { useHistory } from "react-router-dom";
@@ -33,6 +34,13 @@ function Contact() {
   const [disable, setDisable] = useState(false);
 
   //creat my handle
+  const clickHandler = () => {
+    ReactGA.event({
+      category: "Button",
+      action: "Send a formulaire",
+    });
+  };
+
   const handleClick = () => {
     setErrorText(!errorText);
   };
@@ -130,7 +138,12 @@ function Contact() {
           </p>
         ) : null}
         {!errorText && (
-          <button className="btn__send" type="submit" disabled={disable}>
+          <button
+            onClick={clickHandler}
+            className="btn__send"
+            type="submit"
+            disabled={disable}
+          >
             <h1> Send</h1>
           </button>
         )}

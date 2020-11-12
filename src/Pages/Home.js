@@ -1,8 +1,7 @@
 import gsap from "gsap/gsap-core";
 import React, { useRef, useEffect } from "react";
-import { GitHub, Linkedin, Twitter } from "react-feather";
+import { GitHub, Linkedin } from "react-feather";
 import "./home.css";
-import me from "../assets/me.jpeg";
 import { TextPlugin } from "gsap/TextPlugin";
 
 const words = ["Junior.", "A React.js Dev.", "A French Dev.", "Available Now."];
@@ -68,7 +67,11 @@ function Home() {
       </div>
       <div className="home__media">
         <div className="home__mediasocial">
-          <a href="https://github.com/JuniorWMB" target="_blank">
+          <a
+            href="https://github.com/JuniorWMB"
+            rel="noreferrer"
+            target="_blank"
+          >
             <GitHub color="black" strokeWidth="1.5px" size={60} />
           </a>
         </div>
