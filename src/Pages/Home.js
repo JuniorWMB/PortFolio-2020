@@ -4,7 +4,6 @@ import { GitHub, Linkedin } from "react-feather";
 import "./home.css";
 import { TextPlugin } from "gsap/TextPlugin";
 import ReactGa from "react-ga";
-import { withRouter } from "react-router-dom";
 
 const words = ["Junior.", "A React.js Dev.", "A French Dev.", "Available Now."];
 
