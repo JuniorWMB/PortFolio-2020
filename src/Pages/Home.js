@@ -90,11 +90,6 @@ function Home() {
             <Linkedin color="black" strokeWidth="1.5px" size={60} />
           </a>
         </div>
-        {/* <div className="home__mediasocial">
-          <a href="">
-            <Twitter color="black" strokeWidth="1.5px" size={60} />
-          </a>
-        </div> */}
       </div>
     </div>
   );
