@@ -17,6 +17,9 @@ function App() {
     ReactGa.initialize(process.env.REACT_APP_GA_ID);
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
+  useEffect(() => {
+    document.title = "Voici mon portfolio";
+  });
 
   return (
     <Router>
