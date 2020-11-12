@@ -3,12 +3,18 @@ import React, { useRef, useEffect } from "react";
 import { GitHub, Linkedin } from "react-feather";
 import "./home.css";
 import { TextPlugin } from "gsap/TextPlugin";
+import ReactGa from "react-ga";
+import { withRouter } from "react-router-dom";
 
 const words = ["Junior.", "A React.js Dev.", "A French Dev.", "Available Now."];
 
 function Home() {
   let cursorRef = useRef(null);
   let tl = gsap.timeline();
+  useEffect(() => {
+    ReactGa.initialize(process.env.REACT_APP_GA_ID);
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   useEffect(() => {
     gsap.to(cursorRef, { opacity: 0, ease: "power2.inOut", repeat: -1 });
@@ -94,4 +100,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default withRouter(Home);

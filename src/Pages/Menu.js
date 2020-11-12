@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "./menu.css";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import ReactGa from "react-ga";
+
 import gsap from "gsap";
 
 import paris from "../assets/parisx.jpeg";
@@ -25,6 +27,10 @@ function Menu({ state }) {
   let line2 = useRef(null);
   let line3 = useRef(null);
   let info = useRef(null);
+  useEffect(() => {
+    ReactGa.initialize(process.env.REACT_APP_GA_ID);
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, []);
   useEffect(() => {
     if (state.clicked === false) {
       // close menu
@@ -202,4 +208,4 @@ function Menu({ state }) {
   );
 }
 
-export default Menu;
+export default withRouter(Menu);
