@@ -14,7 +14,7 @@ import Contact from "./Pages/Contact";
 
 function App() {
   useEffect(() => {
-    ReactGa.initialize("code here");
+    ReactGa.initialize(process.env.REACT_APP_GA_ID);
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
 
