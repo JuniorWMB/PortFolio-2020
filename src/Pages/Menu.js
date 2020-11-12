@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./menu.css";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ReactGa from "react-ga";
 
 import gsap from "gsap";
@@ -208,4 +208,4 @@ function Menu({ state }) {
   );
 }
 
-export default withRouter(Menu);
+export default Menu;
