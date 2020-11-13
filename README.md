@@ -4,15 +4,16 @@
 ![Hnet-image](https://user-images.githubusercontent.com/59845983/99070453-232fca00-25a8-11eb-8f6e-f8df5df7e6b4.gif)
 
 
-## Site
+# Site
 
 <h1>In the project directory, you can run:</h1>
 
-### Stack
+
+# Stack
 
 
 
-### Features
+# Features
 
 
 
