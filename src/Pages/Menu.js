@@ -19,7 +19,7 @@ const cities = [
 
 function Menu({ state }) {
   useEffect(() => {
-    ReactGa.initialize(process.env.REACT_APP_GA_ID);
+    ReactGa.initialize("UA-182938855-1");
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
   // Vars for our animated dom nodes
@@ -31,10 +31,7 @@ function Menu({ state }) {
   let line2 = useRef(null);
   let line3 = useRef(null);
   let info = useRef(null);
-  useEffect(() => {
-    ReactGa.initialize(process.env.REACT_APP_GA_ID);
-    ReactGa.pageview(window.location.pathname + window.location.search);
-  }, []);
+
   useEffect(() => {
     if (state.clicked === false) {
       // close menu
