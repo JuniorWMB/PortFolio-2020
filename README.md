@@ -3,7 +3,7 @@
 
 ## Available Scripts
 
-In the project directory, you can run:
+<h1>In the project directory, you can run:</h1>
 
 ### `yarn start`
 
