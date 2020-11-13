@@ -12,7 +12,7 @@ function Home() {
   let cursorRef = useRef(null);
   let tl = gsap.timeline();
   useEffect(() => {
-    ReactGa.initialize(process.env.REACT_APP_GA_ID);
+    ReactGa.initialize("UA-182938855-1");
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
 

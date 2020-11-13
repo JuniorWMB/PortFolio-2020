@@ -19,7 +19,7 @@ const cities = [
 
 function Menu({ state }) {
   useEffect(() => {
-    ReactGa.initialize(process.env.REACT_APP_GA_ID);
+    ReactGa.initialize("UA-182938855-1");
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
   // Vars for our animated dom nodes
