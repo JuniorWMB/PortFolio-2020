@@ -1,5 +1,4 @@
 #  My Portfolio
-![4m873j](https://user-images.githubusercontent.com/59845983/99066804-78b4a880-25a1-11eb-901d-b774d7d5ca9e.gif)
 
 
 ## Available Scripts
