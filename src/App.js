@@ -1,12 +1,7 @@
 import "./App.css";
 import React, { useEffect } from "react";
 import ReactGa from "react-ga";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  withRouter,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
