@@ -14,14 +14,12 @@ import Contact from "./Pages/Contact";
 
 function App() {
   useEffect(() => {
-    ReactGa.initialize("UA-182938855-1");
+    ReactGa.initialize(process.env.REACT_APP_GA_ID);
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
   useEffect(() => {
     document.title = "My Portfolio";
   });
-
-  console.log(">>>", process.env);
 
   return (
     <Router>
