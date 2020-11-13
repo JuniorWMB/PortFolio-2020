@@ -1,6 +1,5 @@
 #  My Portfolio
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/59845983/99068595-b6670080-25a4-11eb-9cd9-79b3b5f1baba.gif)
-
+![Hnet-image (2)](https://user-images.githubusercontent.com/59845983/99070205-b5839e00-25a7-11eb-9c76-598cffcbbbf7.gif)
 
 
 ## Available Scripts
