@@ -17,9 +17,9 @@ function App() {
     ReactGa.initialize("UA-182938855-1");
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
-  useEffect(() => {
-    document.title = "My Portfolio";
-  });
+  // useEffect(() => {
+  //   document.title = "My Portfolio";
+  // });
 
   return (
     <Router>

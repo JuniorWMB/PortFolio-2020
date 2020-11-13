@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./menu.css";
 import { Link, withRouter } from "react-router-dom";
-import ReactGa from "react-ga";
-
 import gsap from "gsap";
 
 import paris from "../assets/parisx.jpeg";
@@ -18,10 +16,6 @@ const cities = [
 ];
 
 function Menu({ state }) {
-  useEffect(() => {
-    ReactGa.initialize("UA-182938855-1");
-    ReactGa.pageview(window.location.pathname + window.location.search);
-  }, []);
   // Vars for our animated dom nodes
   let menu = useRef(null);
   let revealMenu = useRef(null);
@@ -209,4 +203,4 @@ function Menu({ state }) {
   );
 }
 
-export default withRouter(Menu);
+export default Menu;
