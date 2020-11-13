@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./menu.css";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 
 import paris from "../assets/parisx.jpeg";
