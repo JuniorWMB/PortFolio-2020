@@ -37,7 +37,7 @@ function Contact() {
   const clickHandler = () => {
     ReactGA.event({
       category: "Button",
-      action: "Send a formulaire",
+      action: "Send a formulaire thanks",
     });
   };
 

@@ -26,7 +26,7 @@ function App() {
     ReactGa.pageview(location.pathname);
   });
    
- }, [])
+ }, [history])
 
 
 
