@@ -17,12 +17,12 @@ import Contact from "./Pages/Contact";
 
 function App() {
 
-  // useEffect(() => {
-  //   ReactGa.initialize("UA-182938855-1");
-  // })
-  // ReactGa.set({ page: location.pathname });
-  // ReactGa.pageview(window.location.pathname + window.location.search); 
-  // });
+  useEffect(() => {
+    ReactGa.initialize("UA-182938855-1");
+  })
+  ReactGa.set({ page: location.pathname });
+  ReactGa.pageview(window.location.pathname + window.location.search); 
+  },[]);
 
 
 //  const history = createBrowserHistory();
