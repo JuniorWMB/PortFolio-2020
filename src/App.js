@@ -22,7 +22,7 @@ function App() {
   })
   ReactGa.set({ page: location.pathname });
   ReactGa.pageview(window.location.pathname + window.location.search); 
-  },[])
+  },[]);
 
 
 //  const history = createBrowserHistory();
