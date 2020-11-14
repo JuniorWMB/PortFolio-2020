@@ -39,7 +39,6 @@ function Contact() {
       category: "Button",
       action: "Send a formulaire",
     });
-    alert("test ok");
   };
 
   const handleClick = () => {
