@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect } from "react";
+import React from "react";
 import ReactGa from "react-ga";
 import { createBrowserHistory } from "history";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
