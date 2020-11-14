@@ -15,30 +15,27 @@ import Contact from "./Pages/Contact";
 
 const history = createBrowserHistory();
 
-// history.listen((location) => {
-//   ReactGa.set({ page: location.pathname });
-//   ReactGa.pageview(location.pathname);
-// });
+history.listen((location) => {
+  ReactGa.set({ page: location.pathname });
+  ReactGa.pageview(location.pathname);
+});
 
 function App() {
   useEffect(() => {
     ReactGa.initialize("UA-182938855-1");
-    history.listen((location) => {
-      ReactGa.set({ page: location.pathname });
-      ReactGa.pageview(location.pathname);
     });
     // ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
 
   return (
-    <Router history={history}>
+    <Router>
       <div className="App">
         <Header />
         <div className="container">
           <div className="wrapper">
             <div className="home">
-              <Switch>
-                <Route exact path="/" component={Home} />
+              <Switch history={history}>
+                <Route  exact path="/" component={Home} />
                 <Route exact path="/menu" component={Menu} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/works" component={Works} />
