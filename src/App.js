@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import ReactGa from "react-ga";
+// import ReactGa from "react-ga";
 // import { createBrowserHistory } from "history";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -17,12 +17,12 @@ import Contact from "./Pages/Contact";
 
 function App() {
 
-  useEffect(() => {
-    ReactGa.initialize("UA-182938855-1");
-  })
-  ReactGa.set({ page: location.pathname });
-  ReactGa.pageview(window.location.pathname + window.location.search); 
-  },[]);
+  // useEffect(() => {
+  //   ReactGa.initialize("UA-182938855-1");
+  // })
+  // ReactGa.set({ page: location.pathname });
+  // ReactGa.pageview(window.location.pathname + window.location.search); 
+  // },[]);
 
 
 //  const history = createBrowserHistory();
