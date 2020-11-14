@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React,{useEffect} from "react";
 import ReactGa from "react-ga";
 import { createBrowserHistory } from "history";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -18,11 +18,17 @@ import Contact from "./Pages/Contact";
 function App() {
  const history = createBrowserHistory();
 
-history.listen((location) => {
-  ReactGa.initialize("UA-182938855-1");
-  ReactGa.set({ page: location.pathname });
-  ReactGa.pageview(location.pathname);
-});
+ useEffect(() => {
+
+  history.listen((location) => {
+    ReactGa.initialize("UA-182938855-1");
+    ReactGa.set({ page: location.pathname });
+    ReactGa.pageview(location.pathname);
+  });
+   
+ }, [])
+
+
 
   return (
     <Router history={history}>
