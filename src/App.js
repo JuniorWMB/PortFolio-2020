@@ -28,13 +28,13 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router history={history}>
       <div className="App">
         <Header />
         <div className="container">
           <div className="wrapper">
             <div className="home">
-              <Switch history={history}>
+              <Switch >
                 <Route  exact path="/" component={Home} />
                 <Route exact path="/menu" component={Menu} />
                 <Route exact path="/about" component={About} />
