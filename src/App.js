@@ -13,19 +13,16 @@ import Works from "./Pages/Works";
 // import de mes dependences
 import Contact from "./Pages/Contact";
 
-const history = createBrowserHistory();
+
+
+function App() {
+ const history = createBrowserHistory();
 
 history.listen((location) => {
+  ReactGa.initialize("UA-182938855-1");
   ReactGa.set({ page: location.pathname });
   ReactGa.pageview(location.pathname);
 });
-
-function App() {
-  useEffect(() => {
-    ReactGa.initialize("UA-182938855-1");
-    });
-    // ReactGa.pageview(window.location.pathname + window.location.search);
-  }, []);
 
   return (
     <Router history={history}>
