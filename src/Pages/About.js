@@ -70,7 +70,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="header__skillssoft">
+          <div className="header__skillssoft skillsofttwo">
             <div className="about__title">
               <h1>Soft Skills</h1>
             </div>

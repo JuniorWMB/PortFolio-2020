@@ -106,7 +106,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    border: royalblue 2px solid;
     align-items: center;
   }
   .header__talktome {
@@ -127,6 +126,8 @@
   }
   .about__skills {
     height: 70%;
+    /* border: orangered 2px solid; */
+
     /* display: flex;
     justify-content: center;
     justify-content: space-around; */
@@ -137,10 +138,13 @@
     /* margin-bottom: 20px; */
     width: 90%;
     height: 90%;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
-  .skillstwo {
-    margin: 20px 0;
+  .skillsofttwo {
+    margin: 50px 0;
+  }
+  .home__picture {
+    display: none;
   }
 }
 
