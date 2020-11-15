@@ -72,7 +72,7 @@ function Home() {
             rel="noreferrer"
             target="_blank"
           >
-            <GitHub color="black" strokeWidth="1.5px" size={60} />
+            <GitHub color="black" strokeWidth="1.5px" size={50} />
           </a>
         </div>
         <div className="home__mediasocial">
@@ -81,7 +81,7 @@ function Home() {
             rel="noreferrer"
             target="_blank"
           >
-            <Linkedin color="black" strokeWidth="1.5px" size={60} />
+            <Linkedin color="black" strokeWidth="1.5px" size={50} />
           </a>
         </div>
         {/* <div className="home__mediasocial">

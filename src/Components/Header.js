@@ -57,10 +57,15 @@ function Header({ history }) {
 
   return (
     <div>
+      
       <header className="header">
+        <div>
         <Link className="header__portfolio" to="/">
           Portfolio.
         </Link>
+        </div>
+        <div>
+
         <button
           disabled={disabled}
           onClick={handleMenu}
@@ -68,6 +73,7 @@ function Header({ history }) {
         >
           {state.nameMenu}
         </button>
+        </div>
       </header>
       <Menu state={state} />
     </div>
