@@ -101,11 +101,18 @@
 
 /*media quieries*/
 
-@media (min-width: 400px) and (max-width: 856px) {
+@media screen and (max-width: 480px) {
+  .header__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: royalblue 2px solid;
+    align-items: center;
+  }
   .header__talktome {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
   }
   .header__talktome > p {
     width: 90%;
@@ -114,8 +121,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
     margin-top: 2%;
   }
   .about__skills {
@@ -124,12 +131,48 @@
     justify-content: center;
     justify-content: space-around; */
   }
-  .header__skillssoft {
+  .header__skillssoft,
+  .header__skillsfrontend,
+  .header__skillsbackend {
+    /* margin-bottom: 20px; */
+    width: 90%;
+    height: 90%;
+    margin-bottom: 20px;
+  }
+  .skillstwo {
     margin: 20px 0;
   }
 }
 
-@media (min-width: 637px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .header__skillssoft,
+  .header__skillsfrontend,
+  .header__skillsbackend {
+    margin: 0px 10px;
+  }
+  .about__title > h1 {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    color: black;
+    font-size: 1.5em;
+  }
+  .about__skills {
+    height: 70%;
+    /* display: flex;
+    justify-content: center;
+    justify-content: space-around; */
+  }
+  .header__talktome > p {
+    /* margin-right: 20px; */
+    position: relative;
+  }
+  .home__picture {
+    position: absolute;
+    left: 390px;
+  }
+  .skillstwo {
+    margin-left: 15px;
+  }
 }
 @media (min-width: 769px) and (max-width: 1018px) {
 }

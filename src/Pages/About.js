@@ -47,6 +47,7 @@ function About() {
             je stalk <b className="about__bold "> Dan Abramov</b>{" "}
             <span>🤫</span> ).
           </p>
+
           <img className="home__picture" src={Moi} alt="photocv" />
         </div>
         <div className="header__skills">
@@ -73,7 +74,7 @@ function About() {
             <div className="about__title">
               <h1>Soft Skills</h1>
             </div>
-            <div className="about__skills">
+            <div className="about__skills skillstwo">
               <div>
                 <h6>Sociable</h6>
                 <h6>Esprit d'initiative</h6>
