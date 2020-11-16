@@ -14,26 +14,23 @@ import Works from "./Pages/Works";
 import Contact from "./Pages/Contact";
 
 function App() {
-  // useEffect(() => {
-  //   ReactGa.initialize("UA-182938855-1");
-  // })
-  // ReactGa.set({ page: location.pathname });
-  // ReactGa.pageview(window.location.pathname + window.location.search);
-  // },[]);
-
   const history = createBrowserHistory();
-
-  useEffect(() => {
-    ReactGa.initialize("UA-182860174-1");
-    history.listen((location, action) => {
-      ReactGa.pageview(window.location.pathname + window.location.search);
-    });
-  }, [history]);
+  history.listen((location) => {
+    ReactGa.set({ page: location.pathname });
+    ReactGa.pageview(location.pathname);
+  });
 
   // useEffect(() => {
   //   ReactGa.initialize("UA-182860174-1");
-  //   ReactGa.pageview(window.location.pathname + window.location.search);
-  // }, []);
+  //   history.listen((location, action) => {
+  //     ReactGa.pageview(window.location.pathname + window.location.search);
+  //   });
+  // }, [history]);
+
+  useEffect(() => {
+    ReactGa.initialize("UA-182860174-1");
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, [history]);
 
   return (
     <Router history={history}>
