@@ -1,6 +1,6 @@
 import "./App.css";
-import React from "react";
-// import ReactGa from "react-ga";
+import React, { useEffect } from "react";
+import ReactGa from "react-ga";
 // import { createBrowserHistory } from "history";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -13,25 +13,27 @@ import Works from "./Pages/Works";
 // import de mes dependences
 import Contact from "./Pages/Contact";
 
-
-
 function App() {
-
   // useEffect(() => {
   //   ReactGa.initialize("UA-182938855-1");
   // })
   // ReactGa.set({ page: location.pathname });
-  // ReactGa.pageview(window.location.pathname + window.location.search); 
+  // ReactGa.pageview(window.location.pathname + window.location.search);
   // },[]);
 
+  // const history = createBrowserHistory();
 
-//  const history = createBrowserHistory();
+  // useEffect(() => {
+  //   ReactGa.initialize("UA-182860174-1");
+  //   history.listen((location, action) => {
+  //     ReactGa.pageview(window.location.pathname + window.location.search);
+  //   });
+  // }, [history]);
 
-// history.listen((location) => {
-//   ReactGa.initialize("UA-182938855-1");
-//   ReactGa.set({ page: location.pathname })
-//   ReactGa.pageview(location.pathname)
-// })
+  useEffect(() => {
+    ReactGa.initialize("UA-182860174-1");
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <Router>
@@ -40,8 +42,8 @@ function App() {
         <div className="container">
           <div className="wrapper">
             <div className="home">
-              <Switch >
-                <Route  exact path="/" component={Home} />
+              <Switch>
+                <Route exact path="/" component={Home} />
                 <Route exact path="/menu" component={Menu} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/works" component={Works} />
