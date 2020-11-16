@@ -86,3 +86,65 @@
   font-weight: 600;
   font-size: 2em;
 }
+
+@media only screen and (max-width: 480px) {
+  .cards {
+    /* border: 2px solid red; */
+    /* width: 350px; */
+    width: 75vw;
+    padding-left: 0px;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-size: 0.9em;
+  }
+  .card__one,
+  .card__two,
+  .card__three,
+  .card__four {
+    width: 70vw;
+    height: 40vh;
+  }
+  .card__buttonhover {
+    width: 55vw;
+    height: 10vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cards {
+    /* border: 2px solid red; */
+    /* width: 350px; */
+    width: 65vw;
+    padding-left: 0px;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-size: 0.9em;
+  }
+  .card__one,
+  .card__two,
+  .card__three,
+  .card__four {
+    width: 65vw;
+    height: 40vh;
+  }
+  .card__buttonhover {
+    width: 55vw;
+    height: 10vh;
+  }
+  .card__image {
+    object-fit: cover;
+    /* max-width: 100%; */
+    /* height: auto; */
+    height: 100%;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+}

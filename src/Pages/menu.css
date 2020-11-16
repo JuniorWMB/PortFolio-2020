@@ -133,8 +133,7 @@ a {
     background-position: 0% 0%;
   }
 }
-
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   .menu__textleft {
     width: 50vw;
     height: 80vh;
@@ -156,7 +155,7 @@ a {
     display: none;
   }
 }
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .menu__right > h4 {
     bottom: 300px;
   }
