@@ -118,6 +118,9 @@
     font-weight: 900;
     font-size: 2em;
   }
+  .contact__form {
+    padding: 0 20px;
+  }
 
   .contact__form > p {
     font-family: "Titillium Web", sans-serif;
@@ -128,36 +131,42 @@
   .form__input {
     border: none;
     border-bottom: solid 5px #fed330;
-    width: 150px;
+    width: 250px;
     outline: none;
     font-weight: 400;
-    font-size: 0.5em;
+    font-size: 0.8em;
     padding: 0 0px;
     caret-color: #fed330;
     font-family: "Titillium Web", sans-serif;
+    margin-right: 10px;
   }
   .form__inputthree {
     border: none;
     border-bottom: solid 5px #fed330;
-    width: 150px;
+    width: 300px;
     outline: none;
     font-weight: 400;
-    font-size: 0.5em;
+    font-size: 0.8em;
     padding: 0 0px;
     caret-color: #fed330;
     font-family: "Titillium Web", sans-serif;
+    margin-right: 10px;
   }
   .form__inputtwo {
     border: none;
     border-bottom: solid 5px #fed330;
-    width: 150px;
-    font-size: 0.5em;
+    width: 250px;
+    font-size: 0.8em;
     padding: 0 0px;
     caret-color: #fed330;
+    margin-right: 10px;
   }
   .contact__forminputpara {
     font-size: 0.5em;
   }
+  .btn__send {
+    margin-bottom: 10px;
+  }
 }
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 }
