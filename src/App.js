@@ -1,8 +1,8 @@
 import "./App.css";
 import React, { useEffect } from "react";
 import ReactGa from "react-ga";
-// import { createBrowserHistory } from "history";
-import createHistory from "history/createBrowserHistory";
+import { createBrowserHistory } from "history";
+// import createHistory from "history/createBrowserHistory";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -16,12 +16,11 @@ import Works from "./Pages/Works";
 import Contact from "./Pages/Contact";
 
 function App() {
-  const history = createHistory();
-  history.listen((location) => {
-    ReactGa.set({ page: location.pathname });
-    ReactGa.pageview(location.pathname);
+  const history = createBrowserHistory(window);
+  history.listen((window) => {
+    ReactGa.set({ page: window.location.pathname });
+    ReactGa.pageview(window.location.pathname);
   });
-
   // useEffect(() => {
   //   ReactGa.initialize("UA-182860174-1");
   //   history.listen((location, action) => {
