@@ -1,7 +1,9 @@
 import "./App.css";
 import React, { useEffect } from "react";
 import ReactGa from "react-ga";
-import { createBrowserHistory } from "history";
+// import { createBrowserHistory } from "history";
+import createHistory from "history/createBrowserHistory";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./Components/Header";
@@ -14,7 +16,7 @@ import Works from "./Pages/Works";
 import Contact from "./Pages/Contact";
 
 function App() {
-  const history = createBrowserHistory();
+  const history = createHistory();
   history.listen((location) => {
     ReactGa.set({ page: location.pathname });
     ReactGa.pageview(location.pathname);
