@@ -112,6 +112,7 @@
     width: 140vw;
     left: 120px;
   } */
+
   .home__textleft {
     position: relative;
     font-family: "Titillium Web", sans-serif;
@@ -120,7 +121,7 @@
     margin-left: 100px;
     overflow: hidden;
     width: 800px;
-    left: 0;
+    left: 100px;
   }
   .home__textleft .box {
     position: absolute;
@@ -132,7 +133,7 @@
     z-index: -1;
   }
   .home__media {
-    left: -2%;
+    left: 55px;
     display: flex;
     justify-content: center;
   }

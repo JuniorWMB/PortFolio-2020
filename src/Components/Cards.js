@@ -14,7 +14,8 @@ import "./card.css";
 import gsap from "gsap";
 import Lbc from "../assets/lbc.jpg";
 import Covid from "../assets/covid.jpg";
-import Marvel from "../assets/marvel3.jpg";
+import Marvel from "../assets/marvelbon.png";
+import Trip from "../assets/trip.jpg";
 
 function Cards() {
   const useStyles = makeStyles({
@@ -176,203 +177,295 @@ function Cards() {
   });
 
   return (
-    <div style={{ with: "800px", marginLeft: "135px" }}>
-      <div className="card__background"></div>
-      <div style={{ marginBottom: "100px", marginLeft: "24px" }}>
-        <h1 className="card__title">My Work</h1>
+    <div className="cards">
+      <div className="card__one">
+        <div className="card__picture">
+          <a
+            href="https://quirky-carson-563fc0.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Lbc} alt="leboncoin logo" className="card__image" />
+          </a>
+        </div>
+        <div className="card__title">
+          <h2>LeBoncoin</h2>
+        </div>
+        <div className="card__button">
+          <a
+            href="https://github.com/JuniorWMB/LBC-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="card__buttonhover">View Code</button>
+          </a>
+        </div>
       </div>
 
-      <div className={classes.contain} maxWidth="lg">
-        <div className="column" theme={theme}>
-          <div>
-            <Box className={classes.root}>
-              <Card>
-                <a
-                  href="https://quirky-carson-563fc0.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      image={Lbc}
-                      width="100%"
-                      height="200"
-                    />
-                  </CardActionArea>
-                </a>
-                <CardContent>
-                  <Typography>LeBoncoin Réplica</Typography>
-                  <Box
-                    style={{ display: "flex", justifyContent: "space-between" }}
-                  >
-                    <Button
-                      onClick={handleClick}
-                      size="small"
-                      color="secondary"
-                      variant="contained"
-                    >
-                      {stack.nameClick}
-                    </Button>
-                    <a
-                      href="https://github.com/JuniorWMB/LBC-app"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button
-                        style={{ marginLeft: "15px" }}
-                        size="small"
-                        color="secondary"
-                        variant="outlined"
-                      >
-                        View the Code
-                      </Button>
-                    </a>
-                  </Box>
-                </CardContent>
-              </Card>
-              <Box className={classes.cardSlide}>
-                <Card ref={(el) => (slideRef = el)}>
-                  <CardContent>
-                    <Typography>
-                      <Box className="title"> FEATURES</Box>
-                      <Box> Login/SignUp</Box>
-                      <Box> Offers/Offer</Box>
-                      <Box> Upload </Box>
-                      <Box> Payment </Box>
-                      <Box className="title">STACK</Box>
-                      <Box> React</Box>
-                      <Box> Nodejs </Box>
-                      <Box> Stripe</Box>
-                      <Box> Heroku</Box>
-                      <Box> </Box>
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Box>
-            </Box>
-            {/* second */}
-          </div>
+      <div className="card__two">
+        <div className="card__picture">
+          <a
+            href="https://covid-19-tracker-4b79f.web.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Covid} alt="leboncoin logo" className="card__image" />
+          </a>
         </div>
-        <Box className={classes.root}>
-          <Card>
-            <a
-              href="https://covid-19-tracker-4b79f.web.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  image={Covid}
-                  width="100%"
-                  height="200"
-                />
-              </CardActionArea>
-            </a>
-            <CardContent>
-              <Typography>Covid-19 Tracker</Typography>
-              <Box style={{ display: "flex", justifyContent: "space-between" }}>
-                <Button
-                  onClick={handleClick2}
-                  size="small"
-                  color="secondary"
-                  variant="contained"
-                >
-                  {stack2.nameClick}
-                </Button>
-                <a
-                  href="https://github.com/JuniorWMB/Covid-19Tracker-api"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    style={{ marginLeft: "15px" }}
-                    size="small"
-                    color="secondary"
-                    variant="outlined"
-                  >
-                    View the Code
-                  </Button>
-                </a>
-              </Box>
-            </CardContent>
-          </Card>
-          <Box className={classes.cardSlide2}>
-            <Card ref={(el) => (slideRef2 = el)}>
-              <CardContent>
-                <Typography>
-                  <Box className="title"> FEATURES</Box>
-                  <Box> Search Covid</Box>
-                  <Box> By Countries</Box>
-                  <Box>View a stat</Box>
-                  <br />
-                  <Box className="title">STACK</Box>
-                  <Box> React </Box>
-                  <Box> Material UI</Box>
-                  <Box> Chart.js</Box>
-                  <Box> Leaflet</Box>
-                  <Box> Firebase</Box>
-                </Typography>
-              </CardContent>
-            </Card>
-          </Box>
-        </Box>
-        {/* second Block */}
-        <Box className={classes.root}>
-          <Card>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                image={Marvel}
-                width="100%"
-                height="200"
-              />
-            </CardActionArea>
-            <CardContent>
-              <Typography>Marvel Comics</Typography>
-              <Box style={{ display: "flex", justifyContent: "space-between" }}>
-                <Button
-                  onClick={handleClick3}
-                  size="small"
-                  color="secondary"
-                  variant="contained"
-                >
-                  {stack3.nameClick}
-                </Button>
-                <Button
-                  style={{ marginLeft: "15px" }}
-                  size="small"
-                  color="secondary"
-                  variant="outlined"
-                >
-                  View the Code
-                </Button>
-              </Box>
-            </CardContent>
-          </Card>
-          <Box className={classes.cardSlide3}>
-            <Card ref={(el) => (slideRef3 = el)}>
-              <CardContent>
-                <Typography>
-                  <Box className="title"> FEATURES</Box>
-                  <Box> Login/SignUp</Box>
-                  <Box> Books and Comics</Box>
-                  <Box> Favoris </Box>
-                  <br />
-                  <Box className="title">STACK</Box>
-                  <Box> Reactjs </Box>
-                  <Box> Nodejs</Box>
-                  <Box> Express</Box>
-                  <Box> Js-Cookie</Box>
-                  <Box> Heroku</Box>
-                </Typography>
-              </CardContent>
-            </Card>
-          </Box>
-        </Box>
+        <div className="card__title">
+          <h2>Covid Tracker</h2>
+        </div>
+        <div className="card__button">
+          <a
+            href="https://github.com/JuniorWMB/Covid-19Tracker-api"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="card__buttonhover">View Code</button>
+          </a>
+        </div>
+      </div>
+      <div className="card__three">
+        <div className="card__picture">
+          <img src={Marvel} alt="leboncoin logo" className="card__image" />
+        </div>
+        <div className="card__title">
+          <h2>Marvel</h2>
+        </div>
+        <div className="card__button">
+          <a
+            href="https://github.com/JuniorWMB/marvel-app-2020"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="card__buttonhover">View Code</button>
+          </a>
+        </div>
+      </div>
+      <div className="card__four">
+        <div className="card__picture">
+          <a
+            href="https://focused-lichterman-784364.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Trip} alt="leboncoin logo" className="card__image" />
+          </a>
+        </div>
+        <div className="card__title">
+          <h2>TripAdvisor Réplica</h2>
+        </div>
+        <div className="card__button">
+          <a
+            href="https://github.com/JuniorWMB/R-plicaTripAdvisor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="card__buttonhover">View Code</button>
+          </a>
+        </div>
       </div>
     </div>
+    // <div style={{ with: "800px", marginLeft: "135px" }}>
+    //   <div className="card__background"></div>
+    //   <div style={{ marginBottom: "100px", marginLeft: "24px" }}>
+    //     <h1 className="card__title">My Work</h1>
+    //   </div>
+
+    //   <div
+    //     className={classes.contain}
+    //     maxWidth="lg"
+    //   >
+    //     <div className="column" theme={theme}>
+    //       <div>
+    //         <Box className={classes.root}>
+    //           <Card>
+    //             <a
+    //               href="https://quirky-carson-563fc0.netlify.app/"
+    //               target="_blank"
+    //               rel="noopener noreferrer"
+    //             >
+    //               <CardActionArea>
+    //                 <CardMedia
+    //                   component="img"
+    //                   image={Lbc}
+    //                   width="100%"
+    //                   height="200"
+    //                 />
+    //               </CardActionArea>
+    //             </a>
+    //             <CardContent>
+    //               <Typography>LeBoncoin Réplica</Typography>
+    //               <Box
+    //                 style={{ display: "flex", justifyContent: "space-between" }}
+    //               >
+    //                 <Button
+    //                   onClick={handleClick}
+    //                   size="small"
+    //                   color="secondary"
+    //                   variant="contained"
+    //                 >
+    //                   {stack.nameClick}
+    //                 </Button>
+    //                 <a
+    //                   href="https://github.com/JuniorWMB/LBC-app"
+    //                   target="_blank"
+    //                   rel="noopener noreferrer"
+    //                 >
+    //                   <Button
+    //                     style={{ marginLeft: "15px" }}
+    //                     size="small"
+    //                     color="secondary"
+    //                     variant="outlined"
+    //                   >
+    //                     View the Code
+    //                   </Button>
+    //                 </a>
+    //               </Box>
+    //             </CardContent>
+    //           </Card>
+    //           <Box className={classes.cardSlide}>
+    //             <Card ref={(el) => (slideRef = el)}>
+    //               <CardContent>
+    //                 <Typography>
+    //                   <Box className="title"> FEATURES</Box>
+    //                   <Box> Login/SignUp</Box>
+    //                   <Box> Offers/Offer</Box>
+    //                   <Box> Upload </Box>
+    //                   <Box> Payment </Box>
+    //                   <Box className="title">STACK</Box>
+    //                   <Box> React</Box>
+    //                   <Box> Nodejs </Box>
+    //                   <Box> Stripe</Box>
+    //                   <Box> Heroku</Box>
+    //                   <Box> </Box>
+    //                 </Typography>
+    //               </CardContent>
+    //             </Card>
+    //           </Box>
+    //         </Box>
+    //         {/* second */}
+    //       </div>
+    //     </div>
+    //     <Box className={classes.root}>
+    //       <Card>
+    //         <a
+    //           href="https://covid-19-tracker-4b79f.web.app/"
+    //           target="_blank"
+    //           rel="noopener noreferrer"
+    //         >
+    //           <CardActionArea>
+    //             <CardMedia
+    //               component="img"
+    //               image={Covid}
+    //               width="100%"
+    //               height="200"
+    //             />
+    //           </CardActionArea>
+    //         </a>
+    //         <CardContent>
+    //           <Typography>Covid-19 Tracker</Typography>
+    //           <Box style={{ display: "flex", justifyContent: "space-between" }}>
+    //             <Button
+    //               onClick={handleClick2}
+    //               size="small"
+    //               color="secondary"
+    //               variant="contained"
+    //             >
+    //               {stack2.nameClick}
+    //             </Button>
+    //             <a
+    //               href="https://github.com/JuniorWMB/Covid-19Tracker-api"
+    //               target="_blank"
+    //               rel="noopener noreferrer"
+    //             >
+    //               <Button
+    //                 style={{ marginLeft: "15px" }}
+    //                 size="small"
+    //                 color="secondary"
+    //                 variant="outlined"
+    //               >
+    //                 View the Code
+    //               </Button>
+    //             </a>
+    //           </Box>
+    //         </CardContent>
+    //       </Card>
+    //       <Box className={classes.cardSlide2}>
+    //         <Card ref={(el) => (slideRef2 = el)}>
+    //           <CardContent>
+    //             <Typography>
+    //               <Box className="title"> FEATURES</Box>
+    //               <Box> Search Covid</Box>
+    //               <Box> By Countries</Box>
+    //               <Box>View a stat</Box>
+    //               <br />
+    //               <Box className="title">STACK</Box>
+    //               <Box> React </Box>
+    //               <Box> Material UI</Box>
+    //               <Box> Chart.js</Box>
+    //               <Box> Leaflet</Box>
+    //               <Box> Firebase</Box>
+    //             </Typography>
+    //           </CardContent>
+    //         </Card>
+    //       </Box>
+    //     </Box>
+    //     {/* second Block */}
+    //     <Box className={classes.root}>
+    //       <Card>
+    //         <CardActionArea>
+    //           <CardMedia
+    //             component="img"
+    //             image={Marvel}
+    //             width="100%"
+    //             height="200"
+    //           />
+    //         </CardActionArea>
+    //         <CardContent>
+    //           <Typography>Marvel Comics</Typography>
+    //           <Box style={{ display: "flex", justifyContent: "space-between" }}>
+    //             <Button
+    //               onClick={handleClick3}
+    //               size="small"
+    //               color="secondary"
+    //               variant="contained"
+    //             >
+    //               {stack3.nameClick}
+    //             </Button>
+    //             <Button
+    //               style={{ marginLeft: "15px" }}
+    //               size="small"
+    //               color="secondary"
+    //               variant="outlined"
+    //             >
+    //               View the Code
+    //             </Button>
+    //           </Box>
+    //         </CardContent>
+    //       </Card>
+    //       <Box className={classes.cardSlide3}>
+    //         <Card ref={(el) => (slideRef3 = el)}>
+    //           <CardContent>
+    //             <Typography>
+    //               <Box className="title"> FEATURES</Box>
+    //               <Box> Login/SignUp</Box>
+    //               <Box> Books and Comics</Box>
+    //               <Box> Favoris </Box>
+    //               <br />
+    //               <Box className="title">STACK</Box>
+    //               <Box> Reactjs </Box>
+    //               <Box> Nodejs</Box>
+    //               <Box> Express</Box>
+    //               <Box> Js-Cookie</Box>
+    //               <Box> Heroku</Box>
+    //             </Typography>
+    //           </CardContent>
+    //         </Card>
+    //       </Box>
+    //     </Box>
+    //   </div>
+    // </div>
   );
 }
 

@@ -67,23 +67,7 @@
   padding: 0 30px;
   caret-color: #fed330;
 }
-/* .contact__form > button {
-  border: none;
-  background: none;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-  margin-left: 700px;
-  border: blue 2px solid;
-} */
 
-/* .contact__form > button > p {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-  cursor: pointer;
-  font-size: 1.5rem;
-} */
 .contact__btnsubmit {
   border: 2px solid black;
   width: 50px;
@@ -119,4 +103,61 @@
   background-color: red;
   cursor: pointer;
   outline: none;
+}
+
+@media screen and (max-width: 480px) {
+  .contact {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact__workwithme > p {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-size: 2em;
+  }
+
+  .contact__form > p {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    color: black;
+  }
+  .form__input {
+    border: none;
+    border-bottom: solid 5px #fed330;
+    width: 150px;
+    outline: none;
+    font-weight: 400;
+    font-size: 0.5em;
+    padding: 0 0px;
+    caret-color: #fed330;
+    font-family: "Titillium Web", sans-serif;
+  }
+  .form__inputthree {
+    border: none;
+    border-bottom: solid 5px #fed330;
+    width: 150px;
+    outline: none;
+    font-weight: 400;
+    font-size: 0.5em;
+    padding: 0 0px;
+    caret-color: #fed330;
+    font-family: "Titillium Web", sans-serif;
+  }
+  .form__inputtwo {
+    border: none;
+    border-bottom: solid 5px #fed330;
+    width: 150px;
+    font-size: 0.5em;
+    padding: 0 0px;
+    caret-color: #fed330;
+  }
+  .contact__forminputpara {
+    font-size: 0.5em;
+  }
+}
+@media screen and (max-width: 768px) {
 }

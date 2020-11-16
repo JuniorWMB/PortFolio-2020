@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600;900&display=swap");
 
-.card__title {
+/* .card__title {
   font-family: "Titillium Web", sans-serif;
   font-weight: 600;
   font-size: 2.5rem;
 }
-/* h1 {
-  margin-left: 100px;
-} */
+
 .title {
   color: white;
   font-family: "Titillium Web", sans-serif;
@@ -15,4 +13,76 @@
 .column {
   display: flex;
   flex-direction: column;
+  border: 2px solid blue;
+} */
+.cards {
+  /* border: 2px solid red; */
+  width: 100vw;
+  padding-left: 160px;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  font-size: 0.9em;
+}
+.card__one,
+.card__two,
+.card__three,
+.card__four {
+  /* border: 2px solid gray; */
+  box-shadow: 10px 3px 15px rgb(187, 187, 187);
+  width: 25%;
+  height: 100%;
+  margin: 20px 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card__picture {
+  height: 50%;
+  overflow: hidden;
+}
+.card__image {
+  /* object-fit: cover; */
+  max-width: 100%;
+  height: auto;
+}
+.card__title {
+  margin-left: 10px;
+}
+.card__button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__button > button:nth-child(1) {
+  border: #fed330 2px solid;
+  background: none;
+}
+.card__button > button:nth-child(2) {
+  background: #fed330;
+}
+.card__buttonhover:hover {
+  cursor: pointer;
+}
+.card__stack {
+  width: 150px;
+  display: flex;
+  background: #fed330;
+  border-radius: 15px;
+}
+.card__buttonhover {
+  border: #fed330 2px solid;
+  width: 20vw;
+  height: 10vh;
+  margin: 0 20px 20px 30px;
+  outline: none;
+  background: none;
+  border-radius: 15px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-size: 2em;
 }

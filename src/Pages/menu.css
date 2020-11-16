@@ -134,63 +134,6 @@ a {
   }
 }
 
-@media (min-width: 400px) and (max-width: 636px) {
-  .menu__right {
-    display: none;
-  }
-  .menu__textleft {
-    width: 50vw;
-    height: 80vh;
-    margin-top: 60px;
-  }
-  .menu__nav {
-    font-size: 3.4rem;
-    margin-left: 100px;
-    margin-top: 10%;
-  }
-  .menu__location > p {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 50;
-    margin-left: 100px;
-    color: red;
-    display: none;
-  }
-  .menu__location > span {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 400;
-    margin-left: 80px;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .menu__textleft {
-    width: 50vw;
-    height: 40vh;
-    margin-top: 150px;
-  }
-  .menu__nav {
-    font-size: 2.4em;
-    margin-left: 100px;
-    margin-top: 10%;
-  }
-  .menu__location > p {
-    border: red 2px solid;
-  }
-  /* .menu__location > span {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 400;
-    margin-left: 100px;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-  } */
-  .menu__right > p {
-    display: none;
-  }
-}
 @media screen and (max-width: 480px) {
   .menu__textleft {
     width: 50vw;
@@ -198,7 +141,7 @@ a {
     margin-top: 100px;
   }
   .menu__nav {
-    font-size: 4em;
+    font-size: 3em;
     margin-left: 50px;
     margin-top: 10%;
   }
@@ -210,17 +153,21 @@ a {
     display: none;
   }
   .menu__location > span {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 400;
-    margin-left: 30px;
-    margin-top: 25px;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
+    display: none;
   }
-  /* .menu__right > h4 {
-    font-size: 15px;
-    bottom: 10%;
-    color: blue;
-  } */
+}
+@media screen and (max-width: 768px) {
+  .menu__right > h4 {
+    bottom: 300px;
+  }
+  .menu__location > p {
+    display: none;
+  }
+  .menu__location > span {
+    margin-left: 100px;
+  }
+
+  .menu__nav {
+    margin-top: 70px;
+  }
 }
