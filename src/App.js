@@ -31,10 +31,10 @@ function App() {
   useEffect(() => {
     ReactGa.initialize("UA-182860174-1");
     ReactGa.pageview(window.location.pathname + window.location.search);
-  }, [history]);
+  }, []);
 
   return (
-    <Router history={history}>
+    <Router>
       <div className="App">
         <Header />
         <div className="container">
