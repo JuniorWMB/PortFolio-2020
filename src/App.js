@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useEffect } from "react";
 import ReactGa from "react-ga";
-// import { createBrowserHistory } from "history";
+import { createBrowserHistory } from "history";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./Components/Header";
@@ -21,22 +21,22 @@ function App() {
   // ReactGa.pageview(window.location.pathname + window.location.search);
   // },[]);
 
-  // const history = createBrowserHistory();
-
-  // useEffect(() => {
-  //   ReactGa.initialize("UA-182860174-1");
-  //   history.listen((location, action) => {
-  //     ReactGa.pageview(window.location.pathname + window.location.search);
-  //   });
-  // }, [history]);
+  const history = createBrowserHistory();
 
   useEffect(() => {
     ReactGa.initialize("UA-182860174-1");
-    ReactGa.pageview(window.location.pathname + window.location.search);
-  }, []);
+    history.listen((location, action) => {
+      ReactGa.pageview(window.location.pathname + window.location.search);
+    });
+  }, [history]);
+
+  // useEffect(() => {
+  //   ReactGa.initialize("UA-182860174-1");
+  //   ReactGa.pageview(window.location.pathname + window.location.search);
+  // }, []);
 
   return (
-    <Router>
+    <Router history={history}>
       <div className="App">
         <Header />
         <div className="container">
