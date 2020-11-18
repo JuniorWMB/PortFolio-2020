@@ -86,6 +86,9 @@
   font-weight: 600;
   font-size: 2em;
 }
+.card__buttonhover:hover {
+  background-color: #fed330;
+}
 
 @media only screen and (max-width: 480px) {
   .cards {
@@ -107,10 +110,19 @@
   .card__four {
     width: 70vw;
     height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .card__buttonhover {
     width: 55vw;
     height: 10vh;
+  }
+  .card__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 768px) {

@@ -137,12 +137,12 @@ a {
   .menu__textleft {
     width: 50vw;
     height: 80vh;
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .menu__nav {
-    font-size: 2.3em;
+    font-size: 3.4em;
     margin-left: 50px;
-    margin-top: 2%;
+    margin-top: 10px;
   }
   .menu__location > p {
     display: none;
@@ -157,16 +157,19 @@ a {
 }
 @media only screen and (max-width: 768px) {
   .menu__right > h4 {
-    bottom: 300px;
+    bottom: 260px;
   }
+
   .menu__location > p {
     display: none;
   }
   .menu__location > span {
     margin-left: 100px;
+    margin-top: 50px;
   }
 
   .menu__nav {
     margin-top: 70px;
+    font-size: 5em;
   }
 }
